@@ -1,9 +1,49 @@
-<main class="h-80 w-screen p-6">
-    <section class="lg:w-1/2 w-full border">
-        <div>Bonjour moi c'est</div>
-        <div>Nathan SASA</div>
-        <div>je suis <span class="text-3xl bg-gradient-to-r from-pink-600 to-purple-400 bg-clip-text text-transparent">Delopper web</span></div>
-    </section>
-    <section></section>
+<main class="h-auto overflow-y-scroll w-screen p-10 lg:pt-20 relative flex flex-col lg:flex-row lg:justify-between">
+    <section class="lg:w-1/2 lg:gap-y-20 gap-y-10 flex flex-col justify-start">
+        <div>
+            <div class="text-3xl mb-4">Bonjour moi c'est</div>
+            <div class="text-5xl mask-b-from-neutral-400">Nathan Sasa</div>
+            <div class="text-gray-500 mt-5 text-justify"> Je suis
+                <span class="text-3xl bg-gradient-to-r from-pink-600 to-purple-400 bg-clip-text text-transparent">Delopper web Frontend</span> indépendant axé sur l'élaboration d'expériences propres et conviviales. Je crée des sites web réactifs et des applications web qui combinent une conception élégante avec une fonctionnalité efficace.
+            </div>
+        </div>
+        <div class="lg:hidden w-full h-96 md:h-120 flex justify-center overflow-hidden relative">
+            <img src="https://i.ibb.co/qYdbNcbd/Adobe-Express-file.png" alt="" class="lg:hidden absolute w-200 h-190 md:h-200 -top-80">
+            <!-- <div class="w-80 h-80 border mask-contain mask-[url(https://i.ibb.co/r2CrWZvn/profile.jpg)] bg-[url(https://i.ibb.co/qYdbNcbd/Adobe-Express-file.png)]"> -->
 
+            <!-- </div> -->
+        </div>
+        <div class="lg:w-1/2 w-full relative">
+            <ul class="flex justify-between w-55">
+                <li class="">
+                    <a href="https://github.com/Nathan-Sasa">
+                        <i class="ri-github-line p-1 text-2xl text-gray-500 border-2 border-gray-400 rounded-md hover:border-pink-400/50 hover:text-pink-400 transition"></i>
+                    </a>
+                </li>
+                <li class="">
+                    <a href="https://www.linkedin.com/in/nathan-sasa?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app">
+                        <i class="ri-linkedin-fill p-1 text-2xl text-gray-500 border-2 border-gray-400 rounded-md hover:border-pink-400/50 hover:text-pink-400 transition"></i>
+                    </a>
+                </li>
+                <li class="">
+                    <a href="https://facebook.com/jonathan.bikuta.05" class="">
+                        <i class="ri-facebook-fill p-1 text-2xl text-gray-500 border-2 border-gray-400 rounded-md hover:border-pink-400/50 hover:text-pink-400 transition"></i>
+                    </a>
+                </li>
+                <li class="">
+                    <a href="https://wa.me/+243825854332?text=hello%20nathan%20je%20besoin%20de%20tes%20services">
+                        <i class="ri-whatsapp-line p-1 text-2xl to-purple-400 text-gray-500 border-2 border-gray-400 rounded-md hover:border-pink-400/50 hover:text-pink-400 transition hover:animate-bounce"></i>
+                    </a>
+                </li>
+            </ul>
+            <button class="w-54 h-8 text-white hover:border-0 bg-gradient-to-r from-pink-400 to-purple-400 mt-3 rounded-2xl cursor-pointer transition hover:animate-bounce outline-1 outline-offset-1 outline-pink-300">
+                Plus sur moi
+            </button>
+        </div>
+    </section>
+    <section class="w-1/2 hidden lg:flex items-center justify-center relative">
+        <div class="w-96 h-106 overflow-hidden relative">
+            <img src="https://i.ibb.co/qYdbNcbd/Adobe-Express-file.png" alt="" class="absolute w-96 h-200 -top-75 lg:inline hidden | mask-radial-[100%_100%] mask-radial-from-60% mask-radial-at-top">
+        </div>
+    </section>
 </main>
