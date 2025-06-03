@@ -10,4 +10,10 @@ import { RouterModule } from '@angular/router';
 })
 export class HomeComponent {
 
+    comptes = {
+        facebook : "profile facebook",
+        github : "profile github",
+        linkedin: "profile linkedin",
+        whatsapp: "profile whatsapp"
+    }
 }

@@ -18,27 +18,29 @@
         <div class="lg:w-1/2 w-full relative">
             <ul class="flex justify-between w-55">
                 <li class="">
-                    <a href="https://github.com/Nathan-Sasa">
-                        <i class="ri-github-line p-1 text-2xl text-gray-500 border-2 border-gray-400 rounded-md hover:border-indigo-600/50 hover:text-pink-400 transition"></i>
+                    <a href="https://github.com/Nathan-Sasa"
+                    [title]=comptes.github>
+                        <i class="ri-github-line p-1 text-2xl text-gray-500 border-2 border-gray-400 rounded-md hover:border-indigo-600/50 hover:text-pink-400 transition duration-300"></i>
                     </a>
                 </li>
                 <li class="">
-                    <a href="https://www.linkedin.com/in/nathan-sasa?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app">
-                        <i class="ri-linkedin-fill p-1 text-2xl text-gray-500 border-2 border-gray-400 rounded-md hover:border-indigo-600/50 hover:text-pink-400 transition"></i>
+                    <a href="https://www.linkedin.com/in/nathan-sasa?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+                    [title]=comptes.linkedin>
+                        <i class="ri-linkedin-fill p-1 text-2xl text-gray-500 border-2 border-gray-400 rounded-md hover:border-indigo-600/50 hover:text-pink-400 transition duration-300"></i>
                     </a>
                 </li>
                 <li class="">
-                    <a href="https://facebook.com/jonathan.bikuta.05" class="">
-                        <i class="ri-facebook-fill p-1 text-2xl text-gray-500 border-2 border-gray-400 rounded-md hover:border-indigo-600/50 hover:text-pink-400 transition"></i>
+                    <a href="https://facebook.com/jonathan.bikuta.05" [title]=comptes.facebook>
+                        <i class="ri-facebook-fill p-1 text-2xl text-gray-500 border-2 border-gray-400 rounded-md hover:border-indigo-600/50 hover:text-pink-400 transition duration-300"></i>
                     </a>
                 </li>
                 <li class="">
-                    <a href="https://wa.me/+243825854332?text=hello%20nathan%20je%20besoin%20de%20tes%20services">
-                        <i class="ri-whatsapp-line p-1 text-2xl to-purple-400 text-gray-500 border-2 border-gray-400 rounded-md hover:border-indigo-600/50 hover:text-pink-400 transition"></i>
+                    <a href="https://wa.me/+243825854332?text=hello%20nathan%20je%20besoin%20de%20tes%20services"[title]=comptes.whatsapp>
+                        <i class="ri-whatsapp-line p-1 text-2xl to-purple-400 text-gray-500 border-2 border-gray-400 rounded-md hover:border-indigo-600/50 hover:text-pink-400 transition duration-300"></i>
                     </a>
                 </li>
             </ul>
-            <button class="w-54 h-8 text-white hover:border-0 bg-gradient-to-r from-pink-400 to-purple-400 mt-3 rounded-2xl cursor-pointer transition hover:animate-bounce outline-1 outline-offset-1 outline-pink-300">
+            <button class="w-54 h-8 text-white hover:border-0 bg-gradient-to-r from-pink-400 to-purple-400 mt-3 rounded-2xl cursor-pointer transition duration-300 hover:from-pink-500 hover:to-purple-500 outline-1 outline-offset-1 outline-pink-300 focus:outline-2" [routerLink]="['/about']">
                 Plus sur moi
             </button>
         </div>
