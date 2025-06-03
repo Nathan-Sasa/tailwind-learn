@@ -1,12 +1,16 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { NgIf } from '@angular/common';
+import { fadeIn, slideInDown, slideInUp } from '../../shared/animations/animations';
+import { HeaderComponent } from '../header/header.component';
 
 @Component({
   selector: 'app-home',
-  imports: [RouterModule],
+  imports: [RouterModule, NgIf, HeaderComponent],
   standalone: true,
   templateUrl: './home.component.html',
-  styleUrl: './home.component.css'
+  styleUrl: './home.component.css',
+  animations: [fadeIn, slideInUp, slideInDown]
 })
 export class HomeComponent {
 
@@ -15,5 +19,9 @@ export class HomeComponent {
         github : "profile github",
         linkedin: "profile linkedin",
         whatsapp: "profile whatsapp"
+    }
+    show = true;
+    toggle(){
+        this.show = !this.show
     }
 }
