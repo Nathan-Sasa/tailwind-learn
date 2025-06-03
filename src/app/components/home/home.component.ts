@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { NgIf } from '@angular/common';
-import { fadeIn, slideInDown, slideInUp } from '../../shared/animations/animations';
+import { fadeIn, slideInDown, slideInRight, slideInUp } from '../../shared/animations/animations';
 import { HeaderComponent } from '../header/header.component';
 
 @Component({
@@ -10,7 +10,7 @@ import { HeaderComponent } from '../header/header.component';
   standalone: true,
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
-  animations: [fadeIn, slideInUp, slideInDown]
+  animations: [fadeIn, slideInUp, slideInDown, slideInRight]
 })
 export class HomeComponent {
 

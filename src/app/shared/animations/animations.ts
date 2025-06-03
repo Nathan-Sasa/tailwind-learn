@@ -36,3 +36,15 @@ export const slideInDown = trigger(
         ])
     ]
 )
+
+export const slideInRight = trigger(
+    'slideInRight', [
+        transition(':enter', [
+            style({transform: 'translateX(25px)', opactity: 0}),
+            animate('500ms ease-in-out', style({transform: 'translateX(0)', opacity: 1}))
+        ]),
+        transition(':leave', [
+            animate('500ms ease-in-out', style({transform: 'translateX(25px)', opacity: 0}))
+        ])
+    ]
+)
