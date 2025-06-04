@@ -1,16 +1,47 @@
-<div class="flex flex-col px-10 h-auto w-full overflow-x-hidden relative | gap-y-5 pt-5 lg:mt-10">
-    <h3 class="text-2xl text-transparent bg-gradient-to-br from-indigo-500 to-pink-500 bg-clip-text" @sledInUp>
-        Education
+<div class="flex flex-col px-10 h-auto w-full overflow-x-hidden relative | gap-y-5 pt-5 lg:mt-10 max-md:mb-5">
+    <h3 class="text-2xl text-transparent bg-gradient-to-br from-indigo-500 to-pink-500 bg-clip-text | flex items-center gap-x-2" @sledInUp>
+        <span class="material-icons">auto_stories</span> <span>Education </span>
     </h3>
 
     <div class="h-auto w-full flex max-md:flex-col gap-y-5 justify-around items-center">
 
-        <div *ngFor="let education of educations" class="w-3/7 min-w-90 max-md:min-w-80 max-sm:min-w-75 h-70 mx-5 border rounded-2xl" @sledInUpLong>
-            <thead>
-
+        <div *ngFor="let education of educations" class="w-3/7 min-w-90 max-md:min-w-75 h-70 max-md:gap-y-5 pb-5 mx-5 rounded-xl overflow-hidden p-2 flex flex-col justify-between relative | {{education.class}}" @sledInUpLong>
+            <thead class="flex w-full items-start gap-x-2 relative">
+                <div>
+                    <span class="text-transparent bg-gradient-to-br from-indigo-200 to-black bg-clip-text | material-icons">
+                        {{education.icon}}
+                    </span>
+                </div>
+                <div class="flex flex-col relative">
+                    <span class="lg:text-xl | mask-b-from-neutral-400 font-bold opacity-90">
+                        {{education.grad}}
+                    </span>
+                    <span class="text-gray-400 font-extralight max-md:text-xs">
+                        {{education.fac}}
+                    </span>
+                    <!-- <div class=" lg:flex hidden text-gray-400 items-center text-xs">
+                        <span class="material-icons ">
+                            {{education.iconLocation}}
+                        </span>
+                        <span>
+                            {{education.location}}
+                        </span>
+                    </div> -->
+                </div>
             </thead>
-            <tbody></tbody>
-            <tfoot></tfoot>
+            <tbody class="shadow shadow-pink-200 h-44 rounded-xl mx-3 p-5 text-gray-700 text-balance overflow-x-hidden overflow-y-auto">
+                {{education.description}}
+            </tbody>
+            <!-- <tfoot>
+                <div class=" max-lg:flex hidden text-gray-400 items-center text-xs">
+                    <span class="material-icons ">
+                        {{education.iconLocation}}
+                    </span>
+                    <span>
+                        {{education.location}}
+                    </span>
+                </div>
+            </tfoot> -->
         </div>
 
     </div>
