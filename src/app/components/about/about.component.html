@@ -3,18 +3,15 @@
 
     <section class="h-auto overflow-y-scroll w-screen pt-3 lg:pt-2.5 relative flex flex-col">
         <div class="flex flex-col px-10 h-auto w-full overflow-x-hidden | gap-y-5 pt-5">
-            <h2 class="text-5xl border-l-4 pl-3 border-indigo-500" @sledInUp>
+            <h2 class="text-5xl max-sm:text-2xl border-l-4 pl-3 border-indigo-500 sticky top-0" @sledInUp>
                 A propos de moi
-                <span class="text-7xl text-indigo-500">.</span>
+                <span class="text-7xl max-sm:text-3xl text-indigo-500">.</span>
             </h2>
-            <div>
+            <p class="text-justify">
                 Je conçois des applications web & mobiles puissantes, scalables et élégantes, adaptées aux besoins réels des entreprises.
-                <i class="material-icons">
-                    
-                </i>
-            </div>
-
+            </p>
         </div>
+        <app-education></app-education>
     </section>
 
 </main>

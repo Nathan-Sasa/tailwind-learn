@@ -3,10 +3,11 @@ import { RouterModule } from '@angular/router';
 import { HeaderComponent } from '../header/header.component';
 import { fadeInDelay, slideInUp, slideInUpLong } from '../../shared/animations/animations';
 import { CommonModule, NgFor, NgIf } from '@angular/common';
+import { EducationComponent } from './education/education.component';
 
 @Component({
   selector: 'app-about',
-  imports: [RouterModule, HeaderComponent, NgFor, NgIf, CommonModule],
+  imports: [RouterModule, HeaderComponent, EducationComponent, CommonModule],
   standalone: true,
   templateUrl: './about.component.html',
   styleUrl: './about.component.css',
@@ -14,10 +15,4 @@ import { CommonModule, NgFor, NgIf } from '@angular/common';
 })
 export class AboutComponent {
 
-    student = {
-        icon: '',
-        grad: '',
-        fac: '',
-        university: ''
-    }
 }

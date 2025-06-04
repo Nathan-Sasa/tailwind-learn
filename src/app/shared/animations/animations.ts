@@ -1,4 +1,4 @@
-import {trigger, transition, style, animate, animation} from '@angular/animations';
+import {trigger, transition, style, animate, query, stagger} from '@angular/animations';
 
 
 export const fadeInDelay = trigger ( 
@@ -59,3 +59,24 @@ export const slideInRight = trigger(
         ])
     ]
 )
+
+// cetta animation fait :
+    
+    // 1. Affiche une liste de projets
+    // 2. Les anime avec un effet stagger au momemt du scroll
+    // 3. Utilise IntersectionObserver pour declencher l'animation quqnd la section entre dans l'ecran.
+
+    export const staggerList = stagger('staggerList', [
+        transition('hidden => visible', [
+            query(
+                '*',
+                [
+                    style({opacity: 0, transform: 'translateY(20px)' }),
+                    stagger(150, [
+                        animate('500ms ease-in-out', style ({opacity: 1, transform: 'translateY(0)'}))
+                    ])
+                ],
+                {optional: true}
+            )
+        ])
+    ])
