@@ -1,19 +1,103 @@
-<main class="grid min-h-screen w-screen place-items-center px-6 py-24 sm:py-32 lg:px-8 z-50 absolute">
-    <div class="text-center">
-        <p class="text-xl font-semibold text-indigo-600">404</p>
+<main class="grid min-h-screen w-screen place-items-center px-6 py-24 sm:py-32 lg:px-8 bg-transparent absolute">
+    <div class="text-center z-10">
+        <p class="text-xl font-semibold text-indigo-500">404</p>
         <h1 class="mt-4 text-5xl font-semibold tracking-tight text-balance text-gray-900 sm:text-7xl animate-bounce">
-            Page not found
+            Page non trouvé
         </h1>
         <p class="mt-6 text-lg font-medium text-pretty text-gray-500 sm:text-xl/8">
-            Sorry, we couldn’t find the page you’re looking for.
+            Désolé, j'ai pas trouvé une page correspondante à ce lien
         </p>
         <div class="mt-10 flex items-center justify-center gap-x-6">
-            <a class="rounded-md bg-gradient-to-br from-indigo-600 to-pink-400 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-pink-500 cursor-pointer" [routerLink]="['/home']">
-                Go back home
-            </a>
-            <!-- <a href="#" class="text-sm font-semibold text-gray-900">
-                Contact support <span aria-hidden="true">&rarr;</span>
-            </a> -->
+            <button class="rounded-md bg-gradient-to-br from-indigo-600 to-pink-400 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:from-indigo-800 hover:to-pink-600 cursor-pointer transition duration-200 outline-1 outline-offset-2 outline-pink-300 focus:outline-2" [routerLink]="['/home']">
+                Retourner à l'Accueil
+            </button>
         </div>
     </div>
+
+
+    <!-- --------------------------------------- BACKGROUND SVG -------------------------------------- -->
+    <svg
+    class="absolute opacity-6 h:screen w-screen z-0"
+    xmlns="http://www.w3.org/2000/svg"
+    version="1.1"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:svgjs="http://svgjs.dev/svgjs"
+    viewBox="0 0 1422 800">
+    <g
+        shape-rendering="crispEdges"
+        stroke-linejoin="round"
+        fill="none"
+        stroke-width="2.5"
+        stroke="hsl(220, 70%, 56%)">
+        <polygon points="1422,0 1066.5,200 1066.5,0"></polygon>
+        <polygon points="888.75,0 1066.5,100 888.75,100"></polygon>
+        <polygon points="711,100 711,0 888.75,100"></polygon>
+        <polygon points="888.75,100 888.75,200 711,200"></polygon>
+        <polygon points="1066.5,100 1066.5,200 888.75,200"></polygon>
+        <polygon points="1066.5,300 1066.5,200 888.75,300"></polygon>
+        <polygon points="888.75,300 711,200 888.75,200"></polygon>
+        <polygon points="888.75,400 711,300 711,400"></polygon>
+        <polygon points="1066.5,400 888.75,400 888.75,300"></polygon>
+        <polygon points="1422,300 1244.25,200 1422,200"></polygon>
+        <polygon points="1244.25,200 1244.25,300 1066.5,200"></polygon>
+        <polygon points="1244.25,400 1244.25,300 1066.5,400"></polygon>
+        <polygon points="1422,400 1244.25,400 1244.25,300"></polygon>
+        <polygon points="533.25,100 711,0 711,100"></polygon>
+        <polygon points="355.5,0 533.25,100 533.25,0"></polygon>
+        <polygon points="533.25,200 533.25,100 355.5,100"></polygon>
+        <polygon points="711,200 711,100 533.25,100"></polygon>
+        <polygon points="355.5,100 355.5,0 177.75,100"></polygon>
+        <polygon points="177.75,0 177.75,100 0,100"></polygon>
+        <polygon points="177.75,200 0,100 0,200"></polygon>
+        <polygon points="177.75,200 355.5,100 177.75,100"></polygon>
+        <polygon points="355.5,200 177.75,200 177.75,300"></polygon>
+        <polygon points="0,200 177.75,300 177.75,200"></polygon>
+        <polygon points="177.75,400 0,300 0,400"></polygon>
+        <polygon points="355.5,300 177.75,300 177.75,400"></polygon>
+        <polygon points="711,300 711,200 533.25,300"></polygon>
+        <polygon points="533.25,200 355.5,300 355.5,200"></polygon>
+        <polygon points="444.375,350 444.375,300 533.25,300"></polygon>
+        <polygon points="444.375,300 355.5,350 355.5,300"></polygon>
+        <polygon points="444.375,350 444.375,400 355.5,350"></polygon>
+        <polygon points="533.25,350 444.375,350 444.375,400"></polygon>
+        <polygon points="533.25,300 711,400 533.25,400"></polygon>
+        <polygon points="533.25,400 533.25,500 711,400"></polygon>
+        <polygon points="355.5,400 533.25,500 533.25,400"></polygon>
+        <polygon points="355.5,600 533.25,500 533.25,600"></polygon>
+        <polygon points="711,500 711,600 533.25,600"></polygon>
+        <polygon points="355.5,400 355.5,500 177.75,400"></polygon>
+        <polygon points="177.75,500 0,400 0,500"></polygon>
+        <polygon points="177.75,600 177.75,500 0,500"></polygon>
+        <polygon points="355.5,500 355.5,600 177.75,500"></polygon>
+        <polygon points="355.5,700 355.5,600 177.75,700"></polygon>
+        <polygon points="177.75,700 0,700 177.75,600"></polygon>
+        <polygon points="177.75,700 0,800 177.75,800"></polygon>
+        <polygon points="177.75,800 355.5,800 355.5,700"></polygon>
+        <polygon points="711,650 622.125,600 711,600"></polygon>
+        <polygon points="533.25,650 622.125,600 533.25,600"></polygon>
+        <polygon points="533.25,650 533.25,700 622.125,700"></polygon>
+        <polygon points="622.125,650 622.125,700 711,650"></polygon>
+        <polygon points="355.5,600 355.5,700 533.25,600"></polygon>
+        <polygon points="533.25,800 355.5,800 533.25,700"></polygon>
+        <polygon points="533.25,700 711,800 533.25,800"></polygon>
+        <polygon points="1422,400 1422,500 1244.25,400"></polygon>
+        <polygon points="1244.25,500 1244.25,400 1066.5,400"></polygon>
+        <polygon points="1066.5,600 1244.25,500 1066.5,500"></polygon>
+        <polygon points="1244.25,500 1422,600 1422,500"></polygon>
+        <polygon points="1066.5,400 1066.5,500 888.75,400"></polygon>
+        <polygon points="888.75,400 711,500 888.75,500"></polygon>
+        <polygon points="888.75,500 711,500 711,600"></polygon>
+        <polygon points="888.75,500 1066.5,600 888.75,600"></polygon>
+        <polygon points="888.75,700 1066.5,700 1066.5,600"></polygon>
+        <polygon points="888.75,600 711,700 711,600"></polygon>
+        <polygon points="711,800 888.75,800 888.75,700"></polygon>
+        <polygon points="1066.5,700 888.75,700 888.75,800"></polygon>
+        <polygon points="1066.5,600 1422,800 1422,600"></polygon>
+    </g>
+    <g
+        fill="none"
+        stroke-width="3"
+        stroke="hsl(220, 43%, 13%)"
+    ></g>
+</svg>
 </main>

@@ -1,13 +1,23 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { HeaderComponent } from '../header/header.component';
+import { fadeInDelay, slideInUp, slideInUpLong } from '../../shared/animations/animations';
+import { CommonModule, NgFor, NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-about',
-  imports: [RouterModule],
+  imports: [RouterModule, HeaderComponent, NgFor, NgIf, CommonModule],
   standalone: true,
   templateUrl: './about.component.html',
-  styleUrl: './about.component.css'
+  styleUrl: './about.component.css',
+  animations: [slideInUpLong, slideInUp, fadeInDelay]
 })
 export class AboutComponent {
 
+    student = {
+        icon: '',
+        grad: '',
+        fac: '',
+        university: ''
+    }
 }
