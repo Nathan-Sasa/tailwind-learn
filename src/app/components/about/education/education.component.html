@@ -1,6 +1,6 @@
-<div class="flex flex-col px-10 h-auto w-full overflow-x-hidden relative | gap-y-5 pt-5 lg:mt-10 max-md:mb-5">
-    <h3 class="text-2xl text-transparent bg-gradient-to-br from-indigo-500 to-pink-500 bg-clip-text | flex items-center gap-x-2" @sledInUp>
-        <span class="material-icons">auto_stories</span> <span>Education </span>
+<div class="flex flex-col h-auto w-full overflow-x-hidden relative | gap-y-5 pt-5 lg:mt-10 mb-5">
+    <h3 class="text-2xl text-transparent bg-gradient-to-br from-indigo-500 to-pink-500 bg-clip-text | flex items-center gap-x-2 mx-10" @sledInUp>
+        <span class="material-icons">auto_stories</span> <span>Etude </span>
     </h3>
 
     <div class="h-auto w-full flex max-md:flex-col gap-y-5 justify-around items-center">
@@ -19,30 +19,61 @@
                     <span class="text-gray-400 font-extralight max-md:text-xs">
                         {{education.fac}}
                     </span>
-                    <!-- <div class=" lg:flex hidden text-gray-400 items-center text-xs">
+                    <div class=" flex text-gray-400 items-center text-xs">
                         <span class="material-icons ">
                             {{education.iconLocation}}
                         </span>
                         <span>
-                            {{education.location}}
+                            {{education.university}}
                         </span>
-                    </div> -->
+                    </div>
                 </div>
             </thead>
-            <tbody class="shadow shadow-pink-200 h-44 rounded-xl mx-3 p-5 text-gray-700 text-balance overflow-x-hidden overflow-y-auto">
+            <tbody class="shadow shadow-pink-200 h-44 rounded-xl mx-3 p-5 text-gray-700 text-balance overflow-x-hidden overflow-y-auto hover:shadow-pink-300">
                 {{education.description}}
             </tbody>
-            <!-- <tfoot>
-                <div class=" max-lg:flex hidden text-gray-400 items-center text-xs">
-                    <span class="material-icons ">
-                        {{education.iconLocation}}
-                    </span>
-                    <span>
-                        {{education.location}}
-                    </span>
-                </div>
-            </tfoot> -->
         </div>
+    </div>
+    <div class="h-auto w-full flex px-10 max-md:px-0 justify-center items-center relative">
+        <div class="h-full w-full max-md:w-75 flex flex-col p-2 pb-3 rounded-xl bg-pink-100">
+            <div class="flex items-center gap-x-1 lg:text-xl | mask-b-from-neutral-400 font-bold opacity-90 mb-5">
+                <span class="material-icons">
+                    workspace_premium
+                </span>
+                <span>
+                    <h2>Certifications</h2>
+                </span>
+            </div>
+            <div class="certif h-auto w-auto flex flex-wrap gap-5 justify-center items-center">
+                <div *ngFor="let certification of certifications" class="group w-64 md:w-75 h-48 rounded-xl shadow shadow-pink-300 overflow-hidden">
+                    <thead class="flex flex-col p-2">
+                        <div class="flex gap-x-1 mask-b-from-20% opacity-100">
+                            <span class="material-icons text-indigo-700">
+                                {{certification.Icon}}
+                            </span>
+                            <span class="text-indigo-700 flex flex-col">
+                                {{certification.certificateName}}
+                            </span>
+                        </div>
+                        <div class="pl-7 mask-b-from-25% opacity-100">
+                            <span>
+                                {{certification.certificateSrc}}
+                            </span>
+                        </div>
+                    </thead>
+                    <tbody class="flex h-3/6 px-5 text-xl justify-center font-extralight">
+                        <i class="text-7xl lg:text-gray-400 {{certification.description}} {{certification.certificateClass}} | mask-b-from-neutral-400 transition duration-300">
 
+                        </i>
+                    </tbody>
+                    <div class="h-8 w-full pl-2">
+                        <a href="{{certification.link}}" target="_blank" class="material-icons mb-3 text-gray-400 hover:text-indigo-500">
+                            open_in_new
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
     </div>
 </div>
