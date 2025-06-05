@@ -8,12 +8,15 @@
     fill: yellow;
 }
 .group:hover .icons8-javascript {
-    fill: orange;
-    -webkit-text-stroke-color: orange;
     background: url('https://i.ibb.co/dJL0WzDt/script-java-2.png') 50% 50% no-repeat;
     background-size: 100%; 
 }
-
+@media (width < 52rem /* 768px */) {
+    .icons8-javascript{
+        background: url('https://i.ibb.co/dJL0WzDt/script-java-2.png') 50% 50% no-repeat;
+        background-size: 100%; 
+    }
+}
 
 
 .icons8-python { 
@@ -27,3 +30,16 @@
     background: url('https://i.ibb.co/qKDY60w/python-2.png') 50% 50% no-repeat;
     background-size: 100%; 
 }
+
+@media (width < 52rem /* 768px */) {
+    .icons8-python{
+        background: url('https://i.ibb.co/qKDY60w/python-2.png') 50% 50% no-repeat;
+        background-size: 100%; 
+    }
+}
+
+
+/* .md-icons8-python{
+    background: url('https://i.ibb.co/qKDY60w/python-2.png') 50% 50% no-repeat;
+    background-size: 100%; 
+} */
