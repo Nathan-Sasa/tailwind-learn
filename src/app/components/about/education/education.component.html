@@ -45,7 +45,7 @@
                 </span>
             </div>
             <div class="certif h-auto w-auto flex flex-wrap gap-5 justify-center items-center">
-                <div *ngFor="let certification of certifications" class="certifCard group w-64 md:w-75 h-48 rounded-xl shadow shadow-pink-300 overflow-hidden">
+                <div *ngFor="let certification of certifications" class="animate-on-scroll certifCard group w-64 md:w-75 h-48 rounded-xl shadow shadow-pink-300 overflow-hidden" appIntersectionAnimation>
                     <thead class="flex flex-col p-2">
                         <div class="flex gap-x-1 mask-b-from-20% opacity-100">
                             <span class="material-icons text-indigo-700">

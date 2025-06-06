@@ -1,11 +1,13 @@
 import { AfterViewInit, Component } from '@angular/core';
 import * as L from 'leaflet'
 import { fadeInDelay, slideInUp, slideInUpLong, slideInUpLongXl } from '../../../shared/animations/animations';
+import { IntersectionAnimationDirective } from '../../../directives/intersection-animation.directive';
+import { CommonModule } from '@angular/common';
 
 
 @Component({
   selector: 'app-location',
-  imports: [],
+  imports: [IntersectionAnimationDirective, CommonModule],
   templateUrl: './location.component.html',
   styleUrl: './location.component.css',
   animations: [fadeInDelay, slideInUpLong, slideInUpLongXl, slideInUp]

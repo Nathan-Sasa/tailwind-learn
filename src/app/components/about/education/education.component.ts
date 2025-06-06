@@ -1,10 +1,11 @@
 import { CommonModule, NgFor } from '@angular/common';
 import { Component } from '@angular/core';
 import { fadeInDelay, fadeInDelayXl, fadeInDelayXxl, slideInDown, slideInRight, slideInUp, slideInUpLong, slideInUpLongXl, slideInUpLongXxl} from '../../../shared/animations/animations';
+import { IntersectionAnimationDirective } from '../../../directives/intersection-animation.directive';
 
 @Component({
   selector: 'app-education',
-  imports: [NgFor, CommonModule],
+  imports: [NgFor, CommonModule, IntersectionAnimationDirective],
   standalone: true,
   templateUrl: './education.component.html',
   styleUrl: './education.component.css',
