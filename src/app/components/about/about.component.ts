@@ -4,10 +4,11 @@ import { HeaderComponent } from '../header/header.component';
 import { fadeInDelay, slideInUp, slideInUpLong } from '../../shared/animations/animations';
 import { CommonModule, NgFor, NgIf } from '@angular/common';
 import { EducationComponent } from './education/education.component';
+import { LocationComponent } from './location/location.component';
 
 @Component({
   selector: 'app-about',
-  imports: [RouterModule, HeaderComponent, EducationComponent, CommonModule],
+  imports: [RouterModule, HeaderComponent, EducationComponent, LocationComponent, CommonModule],
   standalone: true,
   templateUrl: './about.component.html',
   styleUrl: './about.component.css',

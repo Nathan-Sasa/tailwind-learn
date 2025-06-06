@@ -1,6 +1,6 @@
 import { CommonModule, NgFor } from '@angular/common';
 import { Component } from '@angular/core';
-import { fadeInDelay, slideInDown, slideInRight, slideInUp, slideInUpLong} from '../../../shared/animations/animations';
+import { fadeInDelay, fadeInDelayXl, fadeInDelayXxl, slideInDown, slideInRight, slideInUp, slideInUpLong, slideInUpLongXl, slideInUpLongXxl} from '../../../shared/animations/animations';
 
 @Component({
   selector: 'app-education',
@@ -8,7 +8,7 @@ import { fadeInDelay, slideInDown, slideInRight, slideInUp, slideInUpLong} from 
   standalone: true,
   templateUrl: './education.component.html',
   styleUrl: './education.component.css',
-  animations: [slideInDown, slideInRight, slideInUpLong, slideInUp, fadeInDelay]
+  animations: [slideInDown, slideInRight, slideInUpLong, slideInUp, fadeInDelay,fadeInDelayXl, fadeInDelayXxl ,slideInUpLongXl, slideInUpLongXxl]
 })
 export class EducationComponent {
 

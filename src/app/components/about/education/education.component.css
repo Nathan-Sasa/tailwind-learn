@@ -1,3 +1,29 @@
+.certifCard{
+    content-visibility: auto;
+    contain-intrinsic-size: 400px;
+    contain: layout style paint;
+    transition: transform 0.3s;
+}
+@keyframes scale-a-lil{
+    from{
+        scale: 0.7;
+        opacity: 0;
+    }to{
+        scale: 1;
+        opacity: 1;
+    }
+}
+@media (prefers-reduced-motion: no-preference){
+    .certifCard{
+        animation: scale-a-lil ease-out both;
+        animation-timeline: view();
+        animation-range: 0vh 90vh;
+        animation-composition: replace;
+        transform-origin: center center;
+    }
+}
+
+
 .icons8-javascript {
     transition: all 3s ease-in-out;
     display: inline-block;

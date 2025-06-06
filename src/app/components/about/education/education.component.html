@@ -35,7 +35,7 @@
         </div>
     </div>
     <div class="h-auto w-full flex px-10 max-md:px-0 justify-center items-center relative">
-        <div class="h-full w-full max-md:w-75 flex flex-col p-2 pb-3 rounded-xl bg-pink-100">
+        <div class="h-full w-full max-md:w-75 flex flex-col p-2 pb-3 rounded-xl bg-pink-100" @sledInUpLongXxl>
             <div class="flex items-center gap-x-1 lg:text-xl | mask-b-from-neutral-400 font-bold opacity-90 mb-5">
                 <span class="material-icons">
                     workspace_premium
@@ -45,7 +45,7 @@
                 </span>
             </div>
             <div class="certif h-auto w-auto flex flex-wrap gap-5 justify-center items-center">
-                <div *ngFor="let certification of certifications" class="group w-64 md:w-75 h-48 rounded-xl shadow shadow-pink-300 overflow-hidden">
+                <div *ngFor="let certification of certifications" class="certifCard group w-64 md:w-75 h-48 rounded-xl shadow shadow-pink-300 overflow-hidden">
                     <thead class="flex flex-col p-2">
                         <div class="flex gap-x-1 mask-b-from-20% opacity-100">
                             <span class="material-icons text-indigo-700">

@@ -12,6 +12,28 @@ export const fadeInDelay = trigger (
         ])
     ]
 )
+export const fadeInDelayXl = trigger ( 
+    'faceInDelayXl', [
+        transition(':enter', [
+            style({opacity: 0}),
+            animate('500ms 500ms ease-in-out', style({opacity: 1, top: 0}))
+        ]),
+        transition(':leave', [
+            animate('500ms ease-in-out', style({opacity: 0}))
+        ])
+    ]
+)
+export const fadeInDelayXxl = trigger ( 
+    'faceInDelayXxl', [
+        transition(':enter', [
+            style({opacity: 0}),
+            animate('500ms 1s ease-in-out', style({opacity: 1, top: 0}))
+        ]),
+        transition(':leave', [
+            animate('500ms ease-in-out', style({opacity: 0}))
+        ])
+    ]
+)
 
 export const slideInUp = trigger (
     'sledInUp', [
@@ -29,6 +51,28 @@ export const slideInUpLong = trigger(
         transition(':enter', [
             style({transform: 'translateY(40px)', opacity: 0}),
             animate('500ms 500ms ease-in-out', style({transform: 'translateY(0)', opacity: 1}))
+        ]),
+        transition(':leave',[
+            animate('500ms ease-in-out', style({transform: 'translateY(40px)', opacity: 0}))
+        ])
+    ]
+)
+export const slideInUpLongXl = trigger(
+    'sledInUpLongXl', [
+        transition(':enter', [
+            style({transform: 'translateY(40px)', opacity: 0}),
+            animate('500ms 500ms ease-in-out', style({transform: 'translateY(0)', opacity: 1}))
+        ]),
+        transition(':leave',[
+            animate('500ms ease-in-out', style({transform: 'translateY(40px)', opacity: 0}))
+        ])
+    ]
+)
+export const slideInUpLongXxl = trigger(
+    'sledInUpLongXxl', [
+        transition(':enter', [
+            style({transform: 'translateY(40px)', opacity: 0}),
+            animate('500ms 900ms ease-in-out', style({transform: 'translateY(0)', opacity: 1}))
         ]),
         transition(':leave',[
             animate('500ms ease-in-out', style({transform: 'translateY(40px)', opacity: 0}))
