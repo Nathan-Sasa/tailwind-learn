@@ -1,12 +1,14 @@
 import { AfterViewInit, Component } from '@angular/core';
 import * as L from 'leaflet'
+import { fadeInDelay, slideInUp, slideInUpLong, slideInUpLongXl } from '../../../shared/animations/animations';
 
 
 @Component({
   selector: 'app-location',
   imports: [],
   templateUrl: './location.component.html',
-  styleUrl: './location.component.css'
+  styleUrl: './location.component.css',
+  animations: [fadeInDelay, slideInUpLong, slideInUpLongXl, slideInUp]
 })
 export class LocationComponent implements AfterViewInit {
     
@@ -20,7 +22,7 @@ export class LocationComponent implements AfterViewInit {
         }).addTo(map);
 
         L.marker(KinshasaCoords).addTo(map)
-            .bindPopup('kinshasa ')
+            .bindPopup('Nathan se trouve à kinshasa ')
             .openPopup()
     }
 }

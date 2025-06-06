@@ -61,7 +61,7 @@ export const slideInUpLongXl = trigger(
     'sledInUpLongXl', [
         transition(':enter', [
             style({transform: 'translateY(40px)', opacity: 0}),
-            animate('500ms 500ms ease-in-out', style({transform: 'translateY(0)', opacity: 1}))
+            animate('500ms 800ms ease-in-out', style({transform: 'translateY(0)', opacity: 1}))
         ]),
         transition(':leave',[
             animate('500ms ease-in-out', style({transform: 'translateY(40px)', opacity: 0}))
@@ -72,7 +72,7 @@ export const slideInUpLongXxl = trigger(
     'sledInUpLongXxl', [
         transition(':enter', [
             style({transform: 'translateY(40px)', opacity: 0}),
-            animate('500ms 900ms ease-in-out', style({transform: 'translateY(0)', opacity: 1}))
+            animate('500ms 1s ease-in-out', style({transform: 'translateY(0)', opacity: 1}))
         ]),
         transition(':leave',[
             animate('500ms ease-in-out', style({transform: 'translateY(40px)', opacity: 0}))
