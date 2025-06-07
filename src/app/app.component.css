@@ -5,3 +5,11 @@ main{
     overflow-x: hidden;
     overflow-y: scroll;
 }
+
+.change{
+    background: rgb(12, 12, 32);
+    transition: .3s ease;
+}
+.changeBg{
+    transition: all .3s ease;
+}
