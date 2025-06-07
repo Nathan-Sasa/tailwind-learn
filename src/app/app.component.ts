@@ -16,6 +16,6 @@ export class AppComponent {
   @HostListener('window:scroll', [])
   onWindowScroll() {
     const scrollY = window.scrollY || document.documentElement.scrollTop;
-    this.changeBg = scrollY > 1000
+    this.changeBg = scrollY > 1150
   }
 }
