@@ -2,5 +2,12 @@
     font-size: 3rem;
 }
 .foot{
-    font-size: 2.3rem;
+    font-size: 2rem;
+    color: gray;
+    /* position: absolute; */
+    /* transform: rotateZ(180deg); */
 }
+
+/* .foot:first-child{
+    transform: rotateZ(160deg);
+} */
