@@ -16,14 +16,14 @@ export class SkillAnimationDirective implements AfterViewInit, OnDestroy{
     this.observer = new IntersectionObserver(
         ([entry]) =>{
             if(entry.isIntersecting){
-                this.render.addClass(this.el.nativeElement, 'visible');
+                this.render.addClass(this.el.nativeElement, 'isVisible');
                 // this.observer.unobserve(this.el.nativeElement)
             }else{
-                this.render.removeClass(this.el.nativeElement, 'visible');
+                this.render.removeClass(this.el.nativeElement, 'isVisible');
             }
         },
         {
-            threshold: 0.5
+            threshold: 1
         }
     );
     this.observer.observe(this.el.nativeElement);

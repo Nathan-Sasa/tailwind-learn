@@ -1,24 +1,43 @@
-<div class="h-[540px] w-screen flex flex-col justify-between relative border">
-    <div>
-        <h3 class="w-full border pl-5 text-2xl text-transparent bg-gradient-to-br from-indigo-500 to-pink-500 bg-clip-text | flex items-center gap-x-2 mx-1"appSkillAnimation>
+<div class="h-[540px] w-screen flex flex-col justify-between relative">
+    <div appSkillAnimation>
+        <h3 class="w-full pl-5 text-2xl text-transparent bg-gradient-to-br from-indigo-500 to-pink-500 bg-clip-text | flex items-center gap-x-2 mx-1 transition duration-300">
             <span class="material-icons">
                 psychology
             </span>
             <span>Techno et Compétence </span>
         </h3>
     </div>
-    <div class="w-full h-[490px] relative border">
+    <div class="w-full h-[490px] relative ">
         <span class="home material-icons pl-5 | text-transparent bg-gradient-to-br from-indigo-400 to-pink-400 bg-clip-text">dashboard</span>
 
         <!-- icin de pas  -->
-        <i class="foot ri-footprint-fill top-10 left-7 rotate-z-[180deg]" ></i>
-        <i class="foot ri-footprint-fill top-20 left-7 rotate-z-[170deg]"></i>
-        <i class="foot ri-footprint-fill top-30 left-10 rotate-z-[160deg]"></i>
-        <i class="foot ri-footprint-fill top-40 left-15 rotate-z-[140deg]"></i>
-        <i class="foot ri-footprint-fill top-50 left-25 rotate-z-[140deg]"></i>
+        <i class="foot ri-footprint-fill top-10 left-7 rotate-z-[180deg] transition duration-300" appSkillAnimation></i>
+        <i class="foot ri-footprint-fill top-20 left-7 rotate-z-[170deg] transition duration-300" appSkillAnimation></i>
+        <i class="foot ri-footprint-fill top-30 left-10 rotate-z-[150deg] transition duration-300" appSkillAnimation></i>
+        <i class="foot ri-footprint-fill top-40 left-18 rotate-z-[140deg] transition duration-300" appSkillAnimation></i>
+        <i class="foot ri-footprint-fill top-80 left-25 rotate-z-[140deg] transition duration-300" appSkillAnimation></i>
 
 
         <!-- langue maitrisee-->
+         <div class="base absolute top-40 left-20 flex flex-col justify-center items-center">
+            <span class="text-2xl text-transparent bg-gradient-to-br from-indigo-500 to-pink-500 bg-clip-text">Base</span>
+            <div class="flex flex-col items-center">
+                <span class="flex flex-col items-center">
+                    <i class="ri-html5-line text-2xl text-pink-600"></i>
+                    <span class="text-sm ">html</span>
+                </span>
+                <div class="flex items-end gap-x-10">
+                    <span class="flex flex-col items-center pl-2">
+                        <i class="ri-css3-line text-2xl text-blue-600"></i>
+                        <span class="text-sm">css</span>
+                    </span>
+                    <span class="flex flex-col items-center">
+                        <img src="https://i.ibb.co/qY0hKgcG/js.png" class="ri-javascript-line w-5 mb-1 border rounded-sm"/>
+                        <span class="text-sm">javascript</span>
+                    </span>
+                </div>
+            </div>
+         </div>
 
     </div>
 </div>

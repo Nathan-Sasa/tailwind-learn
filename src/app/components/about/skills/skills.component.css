@@ -1,11 +1,24 @@
+/* link of img */
+
+/* icon js black ==  https://i.ibb.co/99y8b7Xb/script-java-4.png */
+
+
+
+
+
+
 .home{
     font-size: 3rem;
 }
 .foot{
     font-size: 2rem;
     color: gray;
-    /* position: absolute; */
+    position: absolute;
+    opacity: 0;
     /* transform: rotateZ(180deg); */
+}
+.foot.isVisible{
+    opacity: 1;
 }
 
 /* .foot:first-child{
