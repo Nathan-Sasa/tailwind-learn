@@ -23,7 +23,7 @@ export class SkillAnimationDirective implements AfterViewInit, OnDestroy{
             }
         },
         {
-            threshold: 1
+            threshold: .9
         }
     );
     this.observer.observe(this.el.nativeElement);
