@@ -1,1 +1,50 @@
-<p>projet works!</p>
+<main class="h-auto w-screen relative flex flex-col || lg:justify-between pt-24 overflow-x-hidden overflow-y-auto z-10">
+    <app-header></app-header>
+
+    <section class="heading h-auto w-screen relative flex flex-col justify-between">
+        <div class="w-full flex flex-col items-center justify-center ralative gap-y-15 mt-6">
+            <h2 class="text-6xl font-extrabold max-sm:text-4xl mask-b-from-20% opacity-100" @slideInDown>
+                Projet et réalisation
+            </h2>
+            <p class="text-3xl w-3/4 text-center font-extralight" @faceInDelay>
+                Optez pour un site attrayant avec un design moderne réaliste, responsive avec un thème des couleur bien choisi à la grandeur de vos activités. 
+            </p>
+        </div>
+        <div class="mockup h-screen bg-indigo-600 rounded-4xl mx-2 mt-50 flex items-center justify-between px-2 overflow-hidden" @sledInUpLong>
+            <div class="h-2/7 w-52 flex flex-col items-center justify-start ml-5 rounded-xl bg-white relative">
+                <span class="text-xl font-bold mt-2">
+                    Responsive Design
+                </span>
+                <ul class="w-52 h-40 mt-5 relative ">
+                    <li class="flex relative">
+                        <a href="#mobile" class="cursor-pointer hover:bg-indigo-100 w-52 h-10 pl-3 flex items-center text-xl font-extralight transition">
+                            Mobile
+                        </a>
+                    </li>
+                    <li class="flex relative">
+                        <a href="#tablette" class="cursor-pointer hover:bg-indigo-100 w-52 h-10 pl-3 flex items-center text-xl font-extralight transition">
+                            Tablette
+                        </a>
+                    </li>
+                    <li class="flex relative">
+                        <a href="#pc" class="cursor-pointer hover:bg-indigo-100 w-52 h-10 pl-3 flex items-center text-xl font-extralight transition">
+                            PC
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="w-3/4 h-[655px] flex flex-col items-start justify-start relative overflow-y-scroll snap-mandatory border">
+                <div id="mobile" class="w-full h-screen shrink-0 flex items-center justify-center snap-center ">
+                    <img src="https://i.ibb.co/ksCGX4bc/home-capture-mobile-2.png" alt="" class="w-52">
+                </div>
+                <div id="tablette" class="w-full h-screen shrink-0 flex items-center justify-center ">
+                    <img src="https://i.ibb.co/ksCGX4bc/home-capture-mobile-2.png" alt="" class="w-52">
+                </div>
+                <div id="tablette" class="w-full h-screen shrink-0 flex items-center justify-center">
+                    <img src="https://i.ibb.co/ksCGX4bc/home-capture-mobile-2.png" alt="" class="w-52">
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>

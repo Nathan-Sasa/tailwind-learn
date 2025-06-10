@@ -23,7 +23,7 @@ export class IntersectionAnimationDirective implements AfterViewInit, OnDestroy 
                 }
             },
             {
-                threshold: 0.5
+                threshold: 0.6
             }
         );
         this.observer.observe(this.el.nativeElement);

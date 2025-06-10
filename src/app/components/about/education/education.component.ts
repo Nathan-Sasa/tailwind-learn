@@ -23,18 +23,17 @@ export class EducationComponent {
             grad              :  'Licence en Sciences Informatiques',
             fac               :  'Administration Réseaux et Télécommunications',
             university      :  'ISIPA – Kinshasa', 
-            class             :  ' bg-gradient-to-br from-pink-50 to-pink-100 hover:bg-gradient-to-rb hover:from-indigo-100 hover:to-pink-100 transition duration-300 lg:cursor-none',
+            class             :  ' bg-gradient-to-br from-pink- to-pink- max-md:from-indigo-50 max-md:to-pink-50 shadow-md hover:bg-gradient-to-rb hover:from-indigo-50 hover:to-pink-50 transition duration-300 lg:cursor-none',
             description     :  'Formation approfondie en informatique avec spécialisation en administration des réseaux et télécommunications. Acquisition de compétences solides en programmation, gestion de bases de données, sécurité informatique et architecture des systèmes d\'information.',
             bodyClass       : 'hover:shadow-xl'
         },
         {
             icon              :  'school',
             iconLocation  :  'location_pin',
-            // location        : 'Institut Supérieur d\'informatique Programmation et Analyse/Kinshasa',
             grad              :  'Graduat en Informatique Industrielle',
             fac               :  'Formation technique spécialisée',
             university      :  'ISIPA – Kinshasa',
-            class             :  ' bg-gradient-to-br from-pink-50 to-pink-100 hover:bg-gradient-to-rb hover:from-cyan-100 hover:to-red-100 transition duration-300 lg:cursor-none',
+            class             :  ' bg-gradient-to-br from-pink- to-pink- max-md:from-blue-50 max-md:to-red-50 hover:bg-gradient-to-rb hover:from-blue-50 hover:to-red-50 transition duration-300 lg:cursor-none',
             description     : 'Formation technique en informatique industrielle couvrant l\'automatisation, la programmation de systèmes embarqués, la maintenance informatique et l\'intégration de solutions technologiques dans l\'environnement industriel. '
         }
     ]
