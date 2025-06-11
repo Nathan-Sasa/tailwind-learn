@@ -3,13 +3,17 @@
 /* icon js black ==  https://i.ibb.co/99y8b7Xb/script-java-4.png */
 
 
-
-
-
-
 .home{
     font-size: 3rem;
 }
+
+.title-skill, .home, .base, .framework, .versioning, .hosting{
+    opacity: 0;
+}
+.title-skill.isVisible, .home.isVisible, .base.isVisible, .framework.isVisible, .versioning.isVisible, .hosting.isVisible{
+    opacity: 1;
+}
+
 .foot{
     font-size: 2rem;
     color: gray;

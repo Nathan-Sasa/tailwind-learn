@@ -1,5 +1,5 @@
 import { ApplicationConfig, provideZoneChangeDetection } from '@angular/core';
-import { provideRouter } from '@angular/router';
+import { ExtraOptions, provideRouter, withEnabledBlockingInitialNavigation, withRouterConfig } from '@angular/router';
 import { Routes } from '@angular/router';
 import {provideAnimations} from '@angular/platform-browser/animations';
 
@@ -18,15 +18,22 @@ const routes: Routes = [
     {path: 'project', component: ProjetComponent},
     {path: 'about', component: AboutComponent},
     {path: 'contact', component: ContactComponent},
-    {path: '**', component: PageNotFoundComponent}
+    // {path: '**', component: PageNotFoundComponent},
+    {path: '**', loadComponent: ()=> import('./components/page-not-found/page-not-found.component').then(m => m.PageNotFoundComponent)}
 ]
+const routerOptions : ExtraOptions = {
+    anchorScrolling: 'enabled',
+    scrollOffset: [0, 64]
+}
 
 export const appConfig: ApplicationConfig = {
 
 
     providers: [
         provideZoneChangeDetection({ eventCoalescing: true }),
-        provideRouter(routes),
+        provideRouter(
+            routes,
+        ),
         provideAnimations()
     ]
 };
