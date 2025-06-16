@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { HeaderComponent } from '../header/header.component';
 import { fadeInDelay, slideInUp, slideInUpLong } from '../../shared/animations/animations';
-import { CommonModule, NgFor, NgIf } from '@angular/common';
+import { CommonModule } from '@angular/common';
 import { EducationComponent } from './education/education.component';
 import { LocationComponent } from './location/location.component';
 import { IntersectionAnimationDirective } from '../../directives/intersection-animation.directive';

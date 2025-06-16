@@ -4,10 +4,11 @@ import { HeaderComponent } from '../header/header.component';
 import { fadeInDelay, slideInDown, slideInUpLong } from '../../shared/animations/animations';
 import { RouterModule } from '@angular/router';
 import { interval } from 'rxjs';
+import { OnlyProjetsComponent } from './only-projets/only-projets.component';
 
 @Component({
   selector: 'app-projet',
-  imports: [CommonModule, HeaderComponent, RouterModule],
+  imports: [CommonModule, HeaderComponent, RouterModule, OnlyProjetsComponent],
   templateUrl: './projet.component.html',
   styleUrl: './projet.component.css',
   animations: [slideInDown, fadeInDelay, slideInUpLong]
