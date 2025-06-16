@@ -32,46 +32,46 @@
     width: 60px;
     height: 60px;
     background: url('https://i.ibb.co/SwCFmgC4/script-java-1.png') 50% 50% no-repeat;
-    background-size: 100%; 
+    background-size: 100%;
     fill: yellow;
 }
 .group:hover .icons8-javascript {
     background: url('https://i.ibb.co/dJL0WzDt/script-java-2.png') 50% 50% no-repeat;
-    background-size: 100%; 
+    background-size: 100%;
 }
 @media (width < 52rem /* 768px */) {
     .icons8-javascript{
         background: url('https://i.ibb.co/dJL0WzDt/script-java-2.png') 50% 50% no-repeat;
-        background-size: 100%; 
+        background-size: 100%;
     }
 }
 
 
-.icons8-python { 
+.icons8-python {
     display: inline-block;
     width: 60px;
     height: 60px;
     background: url('https://i.ibb.co/Xxbg4p3Y/python.png') 50% 50% no-repeat;
-    background-size: 100%; 
+    background-size: 100%;
 }
 .group:hover .icons8-python{
     background: url('https://i.ibb.co/qKDY60w/python-2.png') 50% 50% no-repeat;
-    background-size: 100%; 
+    background-size: 100%;
 }
 
 @media (width < 52rem /* 768px */) {
     .icons8-python{
         background: url('https://i.ibb.co/qKDY60w/python-2.png') 50% 50% no-repeat;
-        background-size: 100%; 
+        background-size: 100%;
     }
 }
 
 
 /* .md-icons8-python{
     background: url('https://i.ibb.co/qKDY60w/python-2.png') 50% 50% no-repeat;
-    background-size: 100%; 
+    background-size: 100%;
 } */
 
-@theme{
+/* @theme{
     --breakpoint-md: 60rem;
-}
+} */
