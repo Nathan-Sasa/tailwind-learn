@@ -1,5 +1,8 @@
-<section class="h-screen w-screen">
-    <div>
-        
+<section class="h-screen w-screen flex items-center">
+    <div *ngFor="let p of project" class="w-96 h-96 border-2 border-gray-500 rounded-2xl">
+        <img src="assets/img/project/market-list.png" alt="" class="w-64">
+        <span>
+            {{p.projectName}}
+        </span>
     </div>
 </section>
