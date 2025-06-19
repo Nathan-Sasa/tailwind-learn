@@ -7,8 +7,8 @@ main{
 }
 
 .change{
-    background: rgb(12, 12, 32);
-    transition: .3s ease;
+    /* background: #09072e; */
+    transition: 300ms ease;
 }
 .changeBg{
     transition: all .3s ease;

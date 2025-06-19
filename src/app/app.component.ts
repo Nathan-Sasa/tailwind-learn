@@ -9,13 +9,13 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'tailwind-learn';
+  title = 'Portfolio';
 
   changeBg = false;
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
     const scrollY = window.scrollY || document.documentElement.scrollTop;
-    this.changeBg = scrollY > 1150
+    this.changeBg = scrollY > 550
   }
 }

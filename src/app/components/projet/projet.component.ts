@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, HostListener, OnDestroy, OnInit } from '@angular/core';
 import { HeaderComponent } from '../header/header.component';
 import { fadeInDelay, slideInDown, slideInUpLong } from '../../shared/animations/animations';
 import { RouterModule } from '@angular/router';
@@ -17,6 +17,9 @@ export class ProjetComponent implements OnInit, OnDestroy{
 
     currentIndex = 0;
     intervalId: any;
+
+    // DarkBg = false;
+
     slides = [
         {
             imgSlide : 'https://i.ibb.co/ksCGX4bc/home-capture-mobile-2.png',
@@ -50,4 +53,10 @@ export class ProjetComponent implements OnInit, OnDestroy{
             this.currentIndex = (this.currentIndex + 1) % this.slides.length;
         }, 5000);
     }
+
+    // @HostListener('window:scroll', [])
+    // onWindowScroll() {
+    //     const scrollY = window.scrollY || document.documentElement.scrollTop;
+    //     this.DarkBg = scrollY > 550
+    // }
 }
