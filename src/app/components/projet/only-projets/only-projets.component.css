@@ -5,4 +5,5 @@
 
 .thumbnail-button.active {
     border: 4px solid rgb(54, 35, 142);
+    background: #4c008238;
 }
