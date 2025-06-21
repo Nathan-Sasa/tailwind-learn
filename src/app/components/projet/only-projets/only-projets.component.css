@@ -1,3 +1,8 @@
 /* .onProject.isVisible{
     background: #000;
 } */
+
+
+.thumbnail-button.active {
+    border: 4px solid rgb(54, 35, 142);
+}
