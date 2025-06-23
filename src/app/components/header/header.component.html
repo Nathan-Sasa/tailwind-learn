@@ -1,8 +1,8 @@
-<header class="lg:flex w-full h-24 justify-between px-4 pt-2 lg:pt-0 items-center bg-white z-2000 backdrop-blur-sm fixed top-0 | bloc">
+<header class="flex w-full h-24 justify-between px-4 pt-2 lg:pt-0 items-center z-2000 backdrop-blur-sm fixed top-0 | bloc">
     <h1 class="bg-gradient-to-r from-pink-500 to-violet-500 bg-clip-text text-3xl font-extrabold text-transparent">
         Portfolio
     </h1>
-    <ul class="flex lg:w-3xl justify-around items-center rounded-3xl border-indigo-500/50 border | text-purple-700 tracking-wide">
+    <ul class="hidden min-lg:flex lg:w-3xl justify-around items-center rounded-3xl border-indigo-500/50 border | text-purple-700 tracking-wide">
         <li class="h-11 flex items-center cursor-pointer"
             routerLinkActive="active"
             [routerLink]="['/home']">
@@ -27,6 +27,19 @@
             Contact
         </li>
     </ul>
+    <button
+        class="lg:hidden w-10 h-10 z-50 fixed right-4 rounded-xl bg-purple-500 text-white flex items-center justify-center"
+        (click)="toggleMenu()"
+        >
+        <i class="ri-menu-line text-2xl" *ngIf="!isMenuOpen"></i>
+        <i class="ri-close-line text-2xl" *ngIf="isMenuOpen"></i>
+    </button>
+    <!-- <div class="toggle">
+    </div> -->
+    <app-menu-toggle 
+        [isOpen]="isMenuOpen"
+        (closed)="closeMenu()"></app-menu-toggle>
+    
     <img
         src="{{dev.profile}}"
         alt=""

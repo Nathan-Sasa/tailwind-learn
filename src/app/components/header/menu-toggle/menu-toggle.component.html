@@ -1,0 +1,70 @@
+<div class="fixed min-lg:hidden inset-0 z-40 h-screen bg-black/50 transition-opacity durarion-300"
+    *ngIf="isOpen"
+    (click)="onClose()">
+</div>
+<ul
+        class="flex flex-col lg:w-3xl justify-start items-start | text-white text-3xl tracking-wide min-lg:hidden fixed top-23 z-50 left-0 right-0 pt-10 gap-y-10 backdrop-blur-xs shadow-lg || h-screen transition-transform duration-300"
+        [ngClass]="{'translate-x-0': isOpen, '-translate-x-full': !isOpen}"
+        >
+        <li class="h-11 flex items-center w-full || pl-14 gap-6">
+            <i 
+                class="bi bi-house-door-fill cursor-pointer"
+                routerLinkActive="active"
+                [routerLink]="['/home']"
+                (click)="onClose()">
+
+            </i>
+            <span
+                class="cursor-pointer"
+                routerLinkActive="active"
+                [routerLink]="['/home']"
+                (click)="onClose()"> Accueil
+            </span>
+        </li>
+        <li class="h-11 flex items-center w-full || pl-14 gap-6">
+            <i 
+                class="bi bi-file-earmark-person-fill cursor-pointer"
+                routerLinkActive="active"
+                [routerLinkActiveOptions]="{ exact: true }"
+                [routerLink]="['/about']"
+                (click)="onClose()">
+            </i>
+            <span
+                class="cursor-pointer"
+                routerLinkActive="active"
+                [routerLinkActiveOptions]="{ exact: true }"
+                [routerLink]="['/about']"
+                (click)="onClose()"> A propos
+            </span>
+        </li>
+        <li class="h-11 flex items-center w-full || pl-14 gap-6">
+            <i 
+                class="bi bi-cast cursor-pointer"
+                routerLinkActive="active"
+                [routerLinkActiveOptions]="{ exact: true }"
+                [routerLink]="['/project']"
+                (click)="onClose()"></i>
+            <span
+                class="cursor-pointer"
+                routerLinkActive="active"
+                [routerLinkActiveOptions]="{ exact: true }"
+                [routerLink]="['/project']"
+                (click)="onClose()"> Projet
+            </span>
+        </li>
+        <li class="h-11 flex items-center w-full || pl-14 gap-6">
+            <i 
+                class="bi bi-person-lines-fill cursor-pointer"
+                routerLinkActive="active"
+                [routerLinkActiveOptions]="{ exact: true }"
+                [routerLink]="['/contact']"
+                (click)="onClose()"></i>
+            <span
+                class="cursor-pointer"
+                routerLinkActive="active"
+                [routerLinkActiveOptions]="{ exact: true }"
+                [routerLink]="['/contact']"
+                (click)="onClose()"> Contact
+            </span>
+        </li>
+    </ul>

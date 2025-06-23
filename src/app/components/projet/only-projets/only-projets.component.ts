@@ -22,41 +22,25 @@ export class OnlyProjetsComponent implements OnInit, OnDestroy {
             projectDescription: '',
             projectLink: '',
             projectTechnologies: [],
-        //     slides : [
-        //         {
-        //             imgSlide : 'assets/img/project/market-list.png',
-        //             buttonSlide: 'assets/img/project/market-list.png',
-        //             classSlide: 'w-full h-full'
-        //         },
-        //         {
-        //             imgSlide :'assets/img/project/market-edit.png',
-        //             buttonSlide: 'assets/img/project/market-edit.png',
-        //             classSlide: 'w-full h-full'
-        //         },
-        //         {
-        //             imgSlide: 'assets/img/project/market-details.png',
-        //             buttonSlide: 'assets/img/project/market-details.png',
-        //             classSlide: 'w-full h-full'
-        //         },
-        //     ]
 
         },
     ]
 
     slides = [
             {
-                imgSlide : 'assets/img/project/verz-entry-app.png',
-                buttonSlide: 'assets/img/project/verz-entry-app.png',
+                imgSlide : 'assets/img/project/market-list.png',
+                buttonSlide: 'assets/img/project/market-list.png',
                 classSlide: 'w-full h-full',
-                projectLink: 'https://verz-entry-app.web.app/',
+                projectLink: 'https://market-site.web.app/',
                 slideTitle: 'Verz App',
                 projectDescription: 'A web application for managing entries and exits in a building, with features like user authentication, entry/exit tracking, and data visualization.',
                 projectTechnologies: ['Angular', 'Firebase', 'Tailwind CSS']
             },
             {
-                imgSlide :'assets/img/project/verz-illu2.png',
-                buttonSlide: 'assets/img/project/verz-illu2.png',
+                imgSlide :'assets/img/project/verz-entry-app.png',
+                buttonSlide: 'assets/img/project/verz-entry-app.png',
                 classSlide: 'w-full h-full',
+                projectLink: 'https://verz-entry-app.web.app/',
                 slideTitle: 'Portfolio',
                 projectDescription: 'A web application for managing entries and exits in a building, with features like user authentication, entry/exit tracking, and data visualization.',
                 projectTechnologies: ['Angular', 'Firebase', 'Tailwind CSS']
@@ -65,6 +49,7 @@ export class OnlyProjetsComponent implements OnInit, OnDestroy {
                 imgSlide: 'assets/img/project/verz-meteo.png',
                 buttonSlide: 'assets/img/project/market-details.png',
                 classSlide: 'w-full h-full',
+                projectLink: 'https://verz-app-meteo.web.app/',
                 slideTitle: 'Facebook Clone',
                 projectDescription: 'A web application for managing entries and exits in a building, with features like user authentication, entry/exit tracking, and data visualization.',
                 projectTechnologies: ['Angular', 'Firebase', 'Tailwind CSS']
@@ -73,6 +58,7 @@ export class OnlyProjetsComponent implements OnInit, OnDestroy {
                 imgSlide: 'assets/img/project/verz-meteo-dark.png',
                 buttonSlide: 'assets/img/project/market-details.png',
                 classSlide: 'w-full h-full',
+                projectLink: 'https://-app.web.app/',
                 slideTitle: 'Verz App Dark',
                 projectDescription: 'A web application for managing entries and exits in a building, with features like user authentication, entry/exit tracking, and data visualization.',
                 projectTechnologies: ['Angular', 'Firebase', 'Tailwind CSS']
