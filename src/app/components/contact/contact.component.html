@@ -12,47 +12,49 @@
                 </mask>
             </defs>
         </svg>
-        <div class="contact-container flex max-md:flex-col max-md:overflow-y-scroll w-screen min-h-screen justify-center max-md:justify-start items-center gap-4 z-50 max-md:pb-6">
+        <div class="contact-container flex flex-col min-lg:flex-row max-md:overflow-y-scroll w-screen min-h-screen justify-center max-md:justify-start items-center gap-4 z-50 max-md:pb-6 min-[769px]:mt-18 min-lg:mt-0 relative || max-md:flex-col-reverse">
             <form
                 #formRef
                 (submit)="onSubmit(); $event.preventDefault()"
                 target="_blank"
-                class="w-1/2 max-md:w-6/7 max-md:h-148 max-h-134 overflow-hidden bg-white/30 p-6 rounded-lg max-md:rounded-3xl shadow-lg backdrop-blur-md relative border-1 border-purple-500/50">
+                class="w-1/2 max-md:w-6/7 max-md:h-148 max-h-134 min-lg:ml-3 overflow-hidden bg-white/30 p-6 rounded-lg max-md:rounded-3xl shadow-lg backdrop-blur-md relative border-1 border-purple-500/50 || min-[769px]:flex min-[769px]:flex-col min-[769px]:w-[750px] || max-sm:max-h-150">
                 <h2
-                    class="text-3xl font-bold text-center mb-4 max-md:mb-4 text-purple-600">
+                    class="text-3xl font-bold text-center mb-4 min-[769px]:mb-8 max-md:mb-4 text-purple-600">
                     Contactez-moi
                 </h2>
-                <div class="mb-2 max-md:mb-2">
-                    <label
-                        for="name"
-                        class="block text-sm font-medium text-gray-700">
-                        Nom
-                        <i class="ri-asterisk text-red-500 text-xs"></i>
-                    </label>
-                    <input
-                        type="text"
-                        id="name"
-                        name="name"
-                        placeholder="John Doe"
-                        required
-                        class="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:border-transparent focus:outline-2 focus:outline-purple-500 placeholder-gray-400">
+                <div class="input-container min-[769px]:grid gap-x-4 min-[769px]:grid-cols-2 max-md:grid-cols-1 min-[769px]:mb-4">
+                    <div class="mb-2 max-md:mb-2">
+                        <label
+                            for="name"
+                            class="block text-sm font-medium text-gray-700">
+                            Nom
+                            <i class="ri-asterisk text-red-500 text-xs"></i>
+                        </label>
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            placeholder="John Doe"
+                            required
+                            class="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:border-transparent focus:outline-2 focus:outline-purple-500 placeholder-gray-400">
+                    </div>
+                    <div class="mb-2 max-md:mb-2">
+                        <label
+                            for="email"
+                            class="block text-sm font-medium text-gray-700">
+                            Email
+                            <i class="ri-asterisk text-red-500 text-xs"></i>
+                        </label>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="exemple_name@domail.com"
+                            required
+                            class="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:border-transparent focus:outline-2 focus:outline-purple-500 placeholder-gray-400 || ">
+                    </div>
                 </div>
-                <div class="mb-2 max-md:mb-2">
-                    <label
-                        for="email"
-                        class="block text-sm font-medium text-gray-700">
-                        Email
-                        <i class="ri-asterisk text-red-500 text-xs"></i>
-                    </label>
-                    <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        placeholder="exemple_name@domail.com"
-                        required
-                        class="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:border-transparent focus:outline-2 focus:outline-purple-500 placeholder-gray-400">
-                </div>
-                <div class="mb-2">
+                <div class="radio-container min-[769px]:mb-4 mb-2">
                     <span class="font-bold">
                         Pourquoi me contactez-vous ?
                     </span>
@@ -93,7 +95,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="mb-2">
+                <div class="area-container min-[769px]:mb-8 mb-2">
                     <label
                         for="message"
                         class="block text-sm font-medium text-gray-700">
@@ -111,7 +113,7 @@
                 </div>
                 <button
                     type="submit"
-                    class="w-full bg-purple-600 text-white py-2 px-4 rounded-md hover:bg-purple-700">
+                    class="w-full bg-purple-600 text-white py-2 px-4 rounded-md hover:bg-purple-700 cursor-pointer">
                     Envoyer
                 </button>
             </form>
@@ -131,36 +133,47 @@
                     Une erreur est survénue lors de l'envoi de votre message. Veuillez réessayer plus tard.
                 </span>
             </p>
-            <div class="w-2/5 max-md:w-6/7 max-md:h-auto max-h-134 bg-white/30 p-6 rounded-lg max-md:rounded-3xl shadow-lg backdrop-blur-md relative border-1 border-purple-500/50">
+            <div class="w-2/5 min-lg:w-2/5 max-md:w-6/7 max-md:h-auto max-h-134 bg-white/30 p-6 rounded-lg max-md:rounded-3xl shadow-lg backdrop-blur-md relative border-1 border-purple-500/50 || min-lg:mr-3 min-[769px]:w-[750px] min[769px]:grid min-[769px]:grid-cols-2">
                 <div class="contact-div">
                     <div
                         *ngFor="let address of addresses"
-                        class="group flex items-center h-24 border border-purple-400 rounded-md gap-2 mb-4 hover:bg-purple-600 transition-all duration-300 ease-in-out hover:shadow-lg hover:shadow-purple-500/50">
+                        class=" flex items-center h-24 border border-purple-400 rounded-md max-md:rounded-xl gap-2 mb-3  transition-all duration-300 ease-in-out hover:shadow-lg hover:shadow-purple-500/50">
                         <div class="flex justify-center items-center w-16 h-full">
                             <i
                                 [ngClass]="address.icon"
                                 class="text-purple-500 text-xl || group-hover:text-white"></i>
                         </div>
                         <div>
-                            <span class="font-bold || group-hover:text-white text-purple-400">{{ address.title }}</span><br>
-                            <span class="text-gray-700 || group-hover:text-white">{{ address.content }}</span>
+                            <span class="font-bold || group-hover:text-white text-purple-400">
+                                {{ address.title }}
+                            </span><br>
+                            <span class="text-gray-700 || group-hover:text-white">
+                                {{ address.content }}
+                            </span>
                         </div>
 
                     </div>
-                    <div class="group flex items-center h-24 border border-purple-400 rounded-md gap-2 mb-4 hover:bg-purple-600 transition-all duration-300 ease-in-out hover:shadow-lg hover:shadow-purple-500/50">
+                    <div class="group flex items-center h-24 border border-purple-400 rounded-md max-md:rounded-xl gap-2 mb-4 min-lg:hover:bg-purple-600 transition-all duration-300 ease-in-out hover:shadow-lg hover:shadow-purple-500/50">
                         <div class="flex justify-center items-center w-16 h-full">
-                            <i class="bi bi-people text-purple-500 text-xl || group-hover:text-white"></i>
+                            <i class="bi bi-people text-purple-500 text-xl || min-lg:group-hover:text-white"></i>
                         </div>
                         <div>
-                            <span class="font-bold || group-hover:text-white text-purple-400">Social</span><br>
+                            <span class="font-bold || min-lg:group-hover:text-white text-purple-400">
+                                Social
+                            </span>
+                            <br>
                             <div class="flex items-center gap-4 mt-2">
                                 <a
-                                href=""
+                                href="{{social.link}}"
                                 target="_blank"
                                 *ngFor="let social of socials"
-                                class="text-gray-700 || group-hover:text-white">
-                                    <i [ngClass]="social.icon" class="group-hover:text-white text-xl text-purple-600"></i>
-                            </a>
+                                class="text-gray-700 || min-lg:group-hover:text-white">
+                                    <i
+                                        [ngClass]="social.icon"
+                                        title="{{social.title}}"
+                                        class="min-lg:group-hover:text-white text-xl text-purple-600">
+                                    </i>
+                                </a>
                             </div>
                         </div>
 

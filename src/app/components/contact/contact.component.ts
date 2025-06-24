@@ -66,27 +66,33 @@ export class ContactComponent {
     socials = [
         {
             title: 'LinkedIn',
-            icon: 'bi bi-linkedin'
+            icon: 'bi bi-linkedin',
+            link: 'https://www.linkedin.com/in/nathan-sasa?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app'
         },
         {
             title: 'GitHub',
-            icon: 'bi bi-github'
+            icon: 'bi bi-github',
+            link: 'https://github.com/Nathan-Sasa'
         },
         {
             title: 'Twitter',
-            icon: 'bi bi-twitter-x'
+            icon: 'bi bi-twitter-x',
+            link: 'https://x.com/s_nathan001?21'
         },
         {
             title: 'Facebook',
-            icon: 'bi bi-facebook'
+            icon: 'bi bi-facebook',
+             link: 'https://facebook.com/jonathan.bikuta.05'
         },
         {
             title: 'Instagram',
-            icon: 'bi bi-instagram'
+            icon: 'bi bi-instagram',
+            link: 'https://www.instagram.com/nathan_sasa00?igsh=MTZrYnAwdnd1dG9hbA%3D%3D&utm_source=qr'
         },
         {
             title: 'WhatsApp',
-            icon: 'bi bi-whatsapp'
+            icon: 'bi bi-whatsapp',
+            link: 'https://wa.me/+243825854332?text=bounjour%20nathan%20je%20besoin%20de%20tes%20services%20de%20developpement%20web'
         },
         //
     ]
