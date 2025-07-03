@@ -1,6 +1,36 @@
-<div class="w-screen mt-10">
-    <h2 class="text-5xl max-sm:text-2xl border-l-4 pl-3 border-indigo-500 sticky top-0">
-        <i class="ri-rocket-line"></i>
-        <span>Stacks</span>
+<div class="w-screen h-screen mt-24 relative flex flex-col items-center justify-between gap-y-5">
+    <h2 class="text-5xl max-sm:text-2xl mask-b-from-10% font-semibold w-full flex items-center justify-center gap-x-2 mb-10 || ">
+        <i class="ri-stack-line"></i>
+        <span>Technologies</span>
     </h2>
+    <div class="stack-conatainer w-full h-full flex flex-col lg:flex-row justify-center items-start gap-5 px-10">
+        <div class="stacks-description w-1/2 max-md:w-full h-auto flex flex-col justify-center items-start gap-y-5">
+            <span class="font-semibold font-mono">
+                Mes outils et technologies de travail
+            </span>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio mollitia, quasi architecto enim quam, odio ipsam ipsa cum possimus voluptate suscipit, reiciendis laboriosam laudantium tempore perspiciatis. Blanditiis quaerat illo facere.</p>
+        </div>
+        <div class="stacks-content w-1/2">
+            <div 
+                *ngFor="let stack of stacks ; let i = index" 
+                class="{{stack.class}}"
+                (click)="stackOpen()">
+                <i class="{{stack.icon}} text-2xl cursor-pointer"></i>
+                <div 
+                    *ngIf="isStackInfo"
+                    class="fixed top-0 left-0 w-full h-full bg-gray-900/50 z-10000 backdrop-blur-xs flex items-center justify-center">
+                    <div class=" bg-white/50 backdrop-blur-xs border border-gray-500/50 rounded-xl p-5 flex flex-col items-center gap-y-5">
+                        <h3 
+                            class="text-xl font-semibold">
+                            {{stack.name}}
+                        </h3>
+                        <p 
+                            class="text-gray-500">
+                            {{stack.description}}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
