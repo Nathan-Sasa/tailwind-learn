@@ -1,6 +1,6 @@
 <div class="flex flex-col h-auto w-full overflow-x-hidden relative | gap-y-5 pt-5 lg:mt-5 mb-5">
     <div class="w-full flex justify-center items-center">
-        <h3 class="text-5xl text-transparent font-bold mask-b-from-50% bg-purple-500 bg-clip-text | flex items-center gap-x-4 mb-4 mx-10">
+        <h3 class="text-5xl font-bold mask-b-from-50%  | flex items-center gap-x-4 mb-4 mx-10">
             <i class="bi bi-mortarboard"></i>
             <span>Etudes </span>
         </h3>
@@ -51,10 +51,10 @@
                 <div *ngFor="let certification of certifications" class="animate-on-scroll certifCard group w-64 md:w-75 h-48 rounded-xl shadow shadow-purple-100 overflow-hidden  || bg-white-400/10 backdrop-blur-xs border border-gray-500/50 || lg:bg-white/10 lg:hover:bg-purple-500/5 lg:hover:border-purple-500/50 transition duration-300 opacity-0">
                     <thead class="flex flex-col p-2">
                         <div class="flex gap-x-1 font-light">
-                            <span class="material-icons text-purple-500">
+                            <span class="material-icons text-purple-500 min-lg:text-gray-400 min-lg:group-hover:text-purple-500">
                                 {{certification.Icon}}
                             </span>
-                            <span class="text-purple-500 flex flex-col">
+                            <span class="text-purple-500 min-lg:text-gray-400 min-lg:group-hover:text-purple-500 flex flex-col">
                                 {{certification.certificateName}}
                             </span>
                         </div>

@@ -7,10 +7,11 @@ import { EducationComponent } from './education/education.component';
 import { LocationComponent } from './location/location.component';
 import { IntersectionAnimationDirective } from '../../directives/intersection-animation.directive';
 import { SkillsComponent } from './skills/skills.component';
+import { StacksComponent } from './stacks/stacks.component';
 
 @Component({
   selector: 'app-about',
-  imports: [RouterModule, HeaderComponent, EducationComponent, LocationComponent, SkillsComponent, CommonModule, IntersectionAnimationDirective],
+  imports: [RouterModule, HeaderComponent, EducationComponent, LocationComponent, SkillsComponent, CommonModule,StacksComponent ,IntersectionAnimationDirective],
   standalone: true,
   templateUrl: './about.component.html',
   styleUrl: './about.component.css',
