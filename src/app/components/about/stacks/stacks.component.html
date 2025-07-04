@@ -4,13 +4,13 @@
         <span>Technologies</span>
     </h2>
     <div class="stack-conatainer w-full h-full flex flex-col lg:flex-row lg:justify-center items-start gap-5 px-10">
-        <div class="interDirective stacks-description lg:w-1/2 w-full h-auto flex flex-col justify-center items-start gap-y-5" appIntersectionAnimation>
+        <div class="stackDirective stacks-description lg:w-1/2 w-full h-auto flex flex-col justify-center items-start gap-y-5" appSkillAnimation>
             <span class="font-semibold font-mono">
                 Mes outils et technologies de travail
             </span>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio mollitia, quasi architecto enim quam, odio ipsam ipsa cum possimus voluptate suscipit, reiciendis laboriosam laudantium tempore perspiciatis. Blanditiis quaerat illo facere.</p>
+            <p class="text-justify">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio mollitia, quasi architecto enim quam, odio ipsam ipsa cum possimus voluptate suscipit, reiciendis laboriosam laudantium tempore perspiciatis. Blanditiis quaerat illo facere.</p>
         </div>
-        <div class="interDirective stacks-content lg:w-1/2 w-full h-auto flex flex-wrap justify-center items-center gap-5" appIntersectionAnimation>
+        <div class="stackDirective stacks-content lg:w-1/2 w-full h-auto flex flex-wrap justify-center items-center gap-5" appSkillAnimation>
             <div 
                 *ngFor="let stack of stacks ; let i = index" 
                 class="{{stack.class}}"

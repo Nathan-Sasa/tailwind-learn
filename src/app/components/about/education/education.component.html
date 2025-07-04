@@ -1,6 +1,6 @@
 <div class="flex flex-col h-auto w-full overflow-x-hidden relative | gap-y-5 pt-5 lg:mt-5 mb-5">
-    <div class="w-full flex justify-center items-center">
-        <h3 class="text-5xl font-bold mask-b-from-10%  | flex items-center gap-x-4 mb-4 mx-10">
+    <div class="skillDirective w-full flex justify-center items-center" appSkillAnimation>
+        <h3 class="text-5xl max-md:text-2xl font-bold mask-b-from-10%  | flex items-center gap-x-4 mb-4 mx-10">
             <i class="bi bi-mortarboard"></i>
             <span>Etudes </span>
         </h3>
@@ -8,7 +8,7 @@
 
     <div class="h-auto w-full flex max-md:flex-col gap-y-5 justify-around items-center">
 
-        <div *ngFor="let education of educations" class="group w-3/7 min-w-90 max-md:min-w-75 h-70 max-md:gap-y-5 pb-5 mx-5 rounded-xl overflow-hidden p-2 flex flex-col justify-between relative shadow-lg shadow-purple-100 min-lg:shadow-gray-500/20 min-lg:hover:shadow-purple-500/20 min-lg:hover:bg-purple-500/5 bg-white/10  backdrop-blur-xs border border-gray-500/50 min-lg:border-gray-500/50 min-lg:hover:border-purple-500/50 transition duration-300 | {{education.class}}">
+        <div *ngFor="let education of educations" class="stackDirective group w-3/7 min-w-90 max-md:min-w-75 h-70 max-md:gap-y-5 pb-5 mx-5 rounded-xl overflow-hidden p-2 flex flex-col justify-between relative shadow-lg shadow-purple-100 min-lg:shadow-gray-500/20 min-lg:hover:shadow-purple-500/20 min-lg:hover:bg-purple-500/5 bg-white/10  backdrop-blur-xs border border-gray-500/50 min-lg:border-gray-500/50 min-lg:hover:border-purple-500/50 transition duration-300 | {{education.class}}" appSkillAnimation>
             <thead class="flex w-full items-start gap-x-2 relative">
                 <div>
                     <span class="text-purple-500 min-lg:text-gray-700 min-lg:group-hover:text-purple-400 mask-b-from-20% transition-colors duration-300| material-icons">
@@ -39,7 +39,7 @@
     </div>
     <div class="h-auto w-full flex px-10 max-md:px-0 justify-center items-center relative">
         <div class="h-full w-full max-md:w-75 flex flex-col p-2 pb-15 rounded-xl ">
-            <div class="flex items-center justify-center gap-x-1 lg:text-xl | mask-b-from-neutral-400 font-bold opacity-90 mb-0 mt-4" appSkillAnimation>
+            <div class="skillDirective flex items-center justify-center gap-x-1 lg:text-xl | mask-b-from-neutral-400 font-bold opacity-90 mt-4 mb-4" appSkillAnimation>
                 <span class="material-icons">
                     workspace_premium
                 </span>
@@ -48,7 +48,7 @@
                 </span>
             </div>
             <div class="certif h-auto w-auto flex flex-wrap gap-5 justify-center items-center">
-                <div *ngFor="let certification of certifications" class="animate-on-scroll certifCard group w-64 md:w-75 h-48 rounded-xl shadow shadow-purple-100 overflow-hidden  || bg-white-400/10 backdrop-blur-xs border border-gray-500/50 || lg:bg-white/10 lg:hover:bg-purple-500/5 lg:hover:border-purple-500/50 transition duration-300 opacity-0">
+                <div *ngFor="let certification of certifications" class="stackDirective certifCard group w-64 md:w-75 h-48 rounded-xl shadow shadow-purple-100 overflow-hidden  || bg-white-400/10 backdrop-blur-xs border border-gray-500/50 || lg:bg-white/10 lg:hover:bg-purple-500/5 lg:hover:border-purple-500/50 || max-md:bg-purple-500/5 max-md:border-purple-500/50" appSkillAnimation>
                     <thead class="flex flex-col p-2">
                         <div class="flex gap-x-1 font-light">
                             <span class="material-icons text-purple-500 min-lg:text-gray-400 min-lg:group-hover:text-purple-500">

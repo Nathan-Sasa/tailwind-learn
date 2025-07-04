@@ -5,7 +5,7 @@ import { IntersectionAnimationDirective } from '../../../directives/intersection
 
 @Component({
   selector: 'app-stacks',
-  imports: [CommonModule, SkillAnimationDirective, IntersectionAnimationDirective],
+  imports: [CommonModule, SkillAnimationDirective],
   templateUrl: './stacks.component.html',
   styleUrl: './stacks.component.css'
 })
