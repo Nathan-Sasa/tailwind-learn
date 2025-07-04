@@ -1,34 +1,54 @@
-<div class="w-screen h-screen mt-24 relative flex flex-col items-center justify-between gap-y-5">
-    <h2 class="text-5xl max-sm:text-2xl mask-b-from-10% font-semibold w-full flex items-center justify-center gap-x-2 mb-10 || ">
+<div class="w-screen h-auto mt-24 mb-16 relative flex flex-col items-center justify-between gap-y-5">
+    <h2 class="skillDirective text-5xl max-sm:text-2xl mask-b-from-10% font-semibold w-full flex items-center justify-center gap-x-2 lg:mb-10 || " appSkillAnimation>
         <i class="ri-stack-line"></i>
         <span>Technologies</span>
     </h2>
-    <div class="stack-conatainer w-full h-full flex flex-col lg:flex-row justify-center items-start gap-5 px-10">
-        <div class="stacks-description w-1/2 max-md:w-full h-auto flex flex-col justify-center items-start gap-y-5">
+    <div class="stack-conatainer w-full h-full flex flex-col lg:flex-row lg:justify-center items-start gap-5 px-10">
+        <div class="interDirective stacks-description lg:w-1/2 w-full h-auto flex flex-col justify-center items-start gap-y-5" appIntersectionAnimation>
             <span class="font-semibold font-mono">
                 Mes outils et technologies de travail
             </span>
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio mollitia, quasi architecto enim quam, odio ipsam ipsa cum possimus voluptate suscipit, reiciendis laboriosam laudantium tempore perspiciatis. Blanditiis quaerat illo facere.</p>
         </div>
-        <div class="stacks-content w-1/2">
+        <div class="interDirective stacks-content lg:w-1/2 w-full h-auto flex flex-wrap justify-center items-center gap-5" appIntersectionAnimation>
             <div 
                 *ngFor="let stack of stacks ; let i = index" 
                 class="{{stack.class}}"
-                (click)="stackOpen()">
+                (click)="selectedStack = stack ; updateBodyScrollOnStackOpen()">
+                <img src="{{stack.img}}" class="{{stack.classImg}} cursor-pointer" />
                 <i class="{{stack.icon}} text-2xl cursor-pointer"></i>
-                <div 
-                    *ngIf="isStackInfo"
-                    class="fixed top-0 left-0 w-full h-full bg-gray-900/50 z-10000 backdrop-blur-xs flex items-center justify-center">
-                    <div class=" bg-white/50 backdrop-blur-xs border border-gray-500/50 rounded-xl p-5 flex flex-col items-center gap-y-5">
-                        <h3 
-                            class="text-xl font-semibold">
-                            {{stack.name}}
-                        </h3>
-                        <p 
-                            class="text-gray-500">
-                            {{stack.description}}
-                        </p>
-                    </div>
+            </div>
+        </div>
+
+        <!-- popup affiche stack infos  -->
+        <div 
+            *ngIf="selectedStack"
+            class="fixed inset-0 top-0 left-0 w-full h-full bg-gray-900/50 bg-opacity-50 z-10000 backdrop-blur-xs flex items-center justify-center">
+
+            <div 
+                class=" bg-white/50 backdrop-blur-xs border border-gray-500/50 rounded-xl p-5 flex flex-col items-center justify-between gap-y-5 relative || shadow-md max-w-sm w-full max-md:w-3/4 h-1/2 transform transition-all duration-300 scale-95 opacity-0"
+                [class.scale-100]="selectedStack"
+                [class.opacity-100]="selectedStack">
+                <button 
+                    class="text-gray-400 border-2 border-gray-400 hover:text-gray-200 hover:border-gray-200 rounded-md h-10 w-10 flex items-center justify-center cursor-pointer absolute right-[-40px] max-md:right-0 top-[-50px] transition duration-200"
+                    (click)="selectedStack = null ; updateBodyScrollOnStackClose()">
+                    <i class="ri-close-line text-2xl"
+                    ></i>
+                </button>
+                <h3 
+                    class="text-xl font-semibold flex justify-center items-center w-full  {{selectedStack.class}}">
+                    <img src="{{selectedStack.img}}" class="w-8 mr-2" alt="">
+                    <i class="{{selectedStack.icon}} mr-2 text-3xl"></i>
+                    <span>
+                        {{selectedStack.name}}
+                    </span>
+                </h3>
+                <div class="flex flex-col items-center justify-between gap-y-2 h-3/4">
+                    <i class="{{selectedStack.illustration}} text-8xl mt-6 text-gray-400"></i>
+                    <p 
+                    class="text-gray-500">
+                    {{selectedStack.description}}
+                    </p>
                 </div>
             </div>
         </div>

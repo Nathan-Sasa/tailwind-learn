@@ -17,3 +17,22 @@ hmtl{
     opacity: 1;
     transform: translateY(0);
 }
+
+.skillDirective{
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all .6s ease-out;
+}
+.skillDirective.isVisible{
+    opacity: 1;
+    transform: translateY(0);
+    transition: all .6s ease-out;
+}
+
+.interDirective{
+    opacity: 0;
+}
+.interDirective.visible{
+    opacity: 1;
+    transition: all .6s ease-out;
+}

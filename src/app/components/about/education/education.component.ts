@@ -6,7 +6,7 @@ import { SkillAnimationDirective } from '../skills/skill-animation.directive';
 
 @Component({
   selector: 'app-education',
-  imports: [NgFor, CommonModule, IntersectionAnimationDirective, SkillAnimationDirective],
+  imports: [NgFor, CommonModule, SkillAnimationDirective],
   standalone: true,
   templateUrl: './education.component.html',
   styleUrl: './education.component.css',

@@ -11,12 +11,13 @@ import { StacksComponent } from './stacks/stacks.component';
 
 @Component({
   selector: 'app-about',
-  imports: [RouterModule, HeaderComponent, EducationComponent, LocationComponent, SkillsComponent, CommonModule,StacksComponent ,IntersectionAnimationDirective],
+  imports: [RouterModule, HeaderComponent, EducationComponent, SkillsComponent, CommonModule,StacksComponent ],
   standalone: true,
   templateUrl: './about.component.html',
   styleUrl: './about.component.css',
   animations: [slideInUpLong, slideInUp, fadeInDelay]
 })
+
 export class AboutComponent {
 
 }

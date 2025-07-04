@@ -13,6 +13,8 @@ import { CommonModule } from '@angular/common';
   animations: [fadeInDelay, slideInUpLong, slideInUpLongXl, slideInUp]
 })
 export class LocationComponent implements AfterViewInit {
+
+    // map // leaflet map
     
     ngAfterViewInit(): void {
         const KinshasaCoords: [number, number] = [-4.37460, 15.34540];

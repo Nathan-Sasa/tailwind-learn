@@ -2,10 +2,11 @@ import { CommonModule } from '@angular/common';
 import { Component, ElementRef, ViewChild } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { HeaderComponent } from '../header/header.component';
+import { LocationComponent } from '../about/location/location.component';
 
 @Component({
   selector: 'app-contact',
-  imports: [RouterModule, CommonModule, HeaderComponent, RouterModule],
+  imports: [RouterModule, CommonModule, HeaderComponent, RouterModule, LocationComponent],
   standalone: true,
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.css'

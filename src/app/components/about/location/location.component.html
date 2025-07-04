@@ -1,21 +1,26 @@
 <section
-    class="w-screen h-auto flex flex-wrap items-center min-lg:items-baseline justify-between max-sm:justify-center relative mt-10 max-sm:pr-0 pr-5">
-    <div class="animate-on-scroll w-2/4 max-sm:w-full max-sm:pl-5 relative justify-center items-center flex flex-col" appIntersectionAnimation>
+    class="w-screen h-auto flex items-center justify-center relative mt-10">
+    <div class="animate-on-scroll w-3/4 max-md:w-full relative justify-center items-center flex flex-col" appIntersectionAnimation>
         <h3
-            class=" w-full border pl-5 text-2xl text-transparent bg-gradient-to-br from-indigo-500 to-pink-500 bg-clip-text | flex items-center gap-x-2 mx-1">
+            class=" w-full text-2xl lg:text-5xl text-black/50 mask-b-from-50% | flex items-center justify-center gap-x-2 mb-4 font-bold">
 
-            <span class="material-icons"> location_pin </span>
+            <i class="bi bi-geo-alt-fill"></i>
             <span>Localisation</span>
         </h3>
+        <!-- div container map // leaflet map -->
         <div
             id="map"
-            class="h-[300px] w-[300px] max-sm:w-[280px] max-sm:ml-0 min-md:w-2/2 overflow-x-hidden relative m-5 ml-10 rounded-2xl border-2 border-indigo-400"
+            class="h-[450px] min-[769px]:w-full max-[360px]:w-[280px] min-[360px]:w-[350px] max-md:h-[320px] overflow-x-hidden relative mb-5 rounded-2xl border-2 border-purple-500"
             @sledInUpLongXl>
             <!-- la carte de la géolocalisation  -->
         </div>
     </div>
-    <div></div>
-    <div
+
+    <!-- div container map  // leaflet map-->
+    <!-- <div></div> -->
+
+    <!-- div container service  -->
+    <!-- <div
         class="animate-on-scroll h-[350px] w-[300px] min-md:w-[300px] max-sm:w-[350px] min-lg:w-2/5 min- m-5 max-sm:mr-5 mt-13 flex flex-col justify-between relative rounded-2xl md:mb-17"
         appIntersectionAnimation>
         <h3
@@ -26,5 +31,5 @@
         <div class="w-full h-[300px] rounded-xl border-2 border-indigo-400">
 
         </div>
-    </div>
+    </div> -->
 </section>

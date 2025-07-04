@@ -6,7 +6,7 @@
 .scroll{
     animation: scroll 1s ease infinite;
     animation-delay: 5s;
-    animation-iteration-count: 10;
+    /* animation-iteration-count: 10; */
 }
 /* @keyframes scroll {
     from {
