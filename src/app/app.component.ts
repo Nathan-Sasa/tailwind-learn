@@ -12,7 +12,7 @@ import Lenis from '@studio-freight/lenis'
 })
 export class AppComponent implements AfterViewInit {
 
-    // private lenis!: Lenis;
+    private lenis!: Lenis;
 
     title = 'Portfolio';
 
@@ -27,35 +27,35 @@ export class AppComponent implements AfterViewInit {
     // l'effort de smooth lors de scroll gere par Lenis
 
     ngAfterViewInit(): void {
-        // this.lenis = new Lenis({
-        //     duration: 1.2,
-        //     easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-        //     direction: 'vertical',
-        //     gestureDirection: 'vertical',
-        //     smooth: true,
-        //     smouthTouche: false,
-        //     smoothWheel: true,
-        //     mouseMultiplier: 1,
-        //     touchMultiplier: 2,
-        //     infinite: false,
-        // } as any)
+        this.lenis = new Lenis({
+            duration: 1.2,
+            easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+            direction: 'vertical',
+            gestureDirection: 'vertical',
+            smooth: true,
+            smouthTouche: false,
+            smoothWheel: true,
+            mouseMultiplier: 1,
+            touchMultiplier: 2,
+            infinite: false,
+        } as any)
 
-        // this.lenis.on('scroll', ( e:{
-        //     scroll: number, 
-        //     limit: number, 
-        //     velocity: number, 
-        //     direction: number, 
-        //     progress: number,
+        this.lenis.on('scroll', ( e:{
+            scroll: number, 
+            limit: number, 
+            velocity: number, 
+            direction: number, 
+            progress: number,
 
-        // }) =>{
-        //     const { scroll, limit, velocity, direction, progress} = e
-        //     console.log(scroll, limit, velocity, direction, progress);
-        // })
+        }) =>{
+            const { scroll, limit, velocity, direction, progress} = e
+            console.log(scroll, limit, velocity, direction, progress);
+        })
 
-        // const raf = (time: number) => {
-        //     this.lenis.raf(time);
-        //     requestAnimationFrame(raf);
-        // }
-        // requestAnimationFrame(raf);
+        const raf = (time: number) => {
+            this.lenis.raf(time);
+            requestAnimationFrame(raf);
+        }
+        requestAnimationFrame(raf);
     }
 }
