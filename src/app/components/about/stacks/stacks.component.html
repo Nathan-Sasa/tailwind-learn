@@ -1,20 +1,20 @@
-<div class="w-screen h-auto mt-24 mb-16 relative flex flex-col items-center justify-between gap-y-5 bg-white">
+<div class="w-screen h-auto mt-24 mb-0 pt-10 relative flex flex-col items-center justify-between gap-y-5 bg-white">
     <h2 class="skillDirective text-5xl max-sm:text-2xl mask-b-from-10% font-semibold w-full flex items-center justify-center gap-x-2 lg:mb-10 mb-6 || " appSkillAnimation>
         <i class="ri-stack-line"></i>
-        <span>Technologies</span>
+        <span>Compétences</span>
     </h2>
 
     <!-- language et techno  -->
     <div class="stack-conatainer w-full flex flex-col lg:flex-row lg:justify-center items-start lg:items-center gap-5 px-10 max-md:px-5">
         <div class="stackDirective stacks-description lg:w-1/2 w-full h-auto flex flex-col justify-center items-start gap-y-5" appSkillAnimation>
             <span class="font-semibold font-mono border-l-4 pl-2 border-indigo-500">
-                Mes outils et technologies de travail
+                technologies
             </span>
             <p class="text-justify">
                 je maîtrise une variété de langages de programmation et de technologies, notamment HTML, CSS, JavaScript, TypeScript, Angular, Tailwind CSS, Bootstrap, Git et GitHub. J'utilise ces outils pour créer des applications web modernes et réactives, en mettant l'accent sur la performance et l'accessibilité.
             </p>
         </div>
-        <div class="stackDirective stacks-content lg:w-1/2 w-full h-auto flex flex-wrap justify-center items-center gap-5" appSkillAnimation>
+        <div class="stackDirective stacks-content lg:w-1/2 min-lg:px-14 min-lg:pt-14 w-full h-auto flex flex-wrap justify-center items-center gap-5" appSkillAnimation>
             <div 
                 *ngFor="let stack of stacks ; let i = index" 
                 class="{{stack.class}}"
@@ -67,7 +67,7 @@
         
         <div class="stackDirective mockup-description lg:w-1/2 w-full h-auto flex flex-col justify-center items-start gap-y-5" appSkillAnimation>
             <span class="font-semibold font-mono w-full min-lg:flex min-lg:justify-end min-lg:border-l-0 min-lg:border-r-4 min-lg:pr-2 border-l-4 pl-2 min-lg:pl-0 border-indigo-500">
-                Responsivité et accessibilité
+                Interface
             </span>
             <p class="text-justify">
                 Je conçois des sites pour être accessible et responsive, garantissant une expérience utilisateur optimale sur tous les appareils. Les technologies modernes utilisées assurent une navigation fluide et intuitive.
