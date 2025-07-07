@@ -3,9 +3,11 @@ import { ExtraOptions, provideRouter, withEnabledBlockingInitialNavigation, with
 import { Routes } from '@angular/router';
 import {provideAnimations} from '@angular/platform-browser/animations';
 
+import {provideFirebaseApp, initializeApp} from '@angular/fire/app';
+import {provideFirestore, getFirestore  } from '@angular/fire/firestore';
 
 // import { routes } from './app.routes';
-// import { HeaderComponent } from './components/header/header.component';
+import { environment } from '../environments/environment';
 import { HomeComponent } from './components/home/home.component';
 import { ProjetComponent } from './components/projet/projet.component';
 import { ContactComponent } from './components/contact/contact.component';
@@ -34,6 +36,9 @@ export const appConfig: ApplicationConfig = {
         provideRouter(
             routes,
         ),
-        provideAnimations()
+        provideAnimations(),
+        // @ts-ignore
+        provideFirebaseApp(() => initializeApp(environment.firebase)),
+        provideFirestore(() => getFirestore()),
     ]
 };

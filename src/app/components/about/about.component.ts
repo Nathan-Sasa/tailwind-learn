@@ -8,10 +8,11 @@ import { LocationComponent } from './location/location.component';
 import { IntersectionAnimationDirective } from '../../directives/intersection-animation.directive';
 import { SkillsComponent } from './skills/skills.component';
 import { StacksComponent } from './stacks/stacks.component';
+import { CommentaireComponent } from './commentaire/commentaire.component';
 
 @Component({
   selector: 'app-about',
-  imports: [RouterModule, HeaderComponent, EducationComponent, SkillsComponent, CommonModule,StacksComponent ],
+  imports: [RouterModule, HeaderComponent, EducationComponent, SkillsComponent, CommonModule,StacksComponent, CommentaireComponent],
   standalone: true,
   templateUrl: './about.component.html',
   styleUrl: './about.component.css',
