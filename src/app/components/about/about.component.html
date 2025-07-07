@@ -109,23 +109,36 @@
         <!-- <app-commentaire></app-commentaire> -->
         
         <!-- comment section  -->
-        <div class="w-full h-130 flex flex-col gap-y-4 items-center justify-start relative mt-10">
+        <div class="w-full max-md:h-auto min-lg:h-130 flex flex-col gap-y-4 items-center justify-start relative mt-10">
             <h3
                 class=" w-full text-2xl lg:text-5xl text-black/50 mask-b-from-50% | flex items-center justify-center gap-x-2 mb-4 font-bold">
                 <i class="bi bi-chat-left-text-fill"></i>
                 <span>Commentaires</span>
             </h3>
-            <div class="w-full h-120 flex flex-col justify-between max-md:items-center overflow-x-hidden relative mb-5">
-                <div class="w-full h-92 flex max-md:flex-col justify-center items-center gap-5 px-10 max-md:px-5">
-                    <div class="w-1/2 max-md:w-full h-full flex-col flex justify-around items-start pl-10">
+
+            <div class="w-full max-md:h-auto min-lg:h-120 flex flex-col justify-between max-md:items-center overflow-x-hidden relative mb-5">
+                <!-- comment header -->
+                <div class="w-full min-lg:h-92 h-auto flex flex-col min-lg:flex-row justify-center items-center max-sm:justify-start gap-5 px-10 max-md:px-5">
+
+                    <!-- content text comment -->
+                    <div class="w-1/2 max-sm:w-full h-auto min-lg:h-full flex-col flex justify-start items-start min-lg:justify-around">
+                        <p class="text-2xl max-sm:text-xl text-left">
+                            Ce que les gens disent sur moi !
+                        </p>
                         <p>
                             Vous pouvez laisser un commentaire sur mon site, je serai ravi de le lire et de vous répondre.
                             <br>
+                            <br>
                             Merci pour votre visite !
                         </p>
-                        <div>
-                            <button class="w-50 h-12 rounded-lg bg-purple-500 text-white text-xl tracking-wider">Commenter</button>
-                            <div class="flex items-center justify-between relative mt-4 gap-x-2 w-50">
+                        <div class="mt-4">
+                            <button 
+                                class="w-50 h-12 rounded-lg bg-purple-500 text-white text-xl tracking-wider cursor-pointer hover:bg-purple-600"
+                                (click)="openComment()">
+                                Commenter
+                            </button>
+                            
+                            <div class="flex items-center justify-between relative mt-4 w-50">
                                 <img 
                                     src="assets/img/profile/female-2835524_1280.jpg" 
                                     alt=""
@@ -157,15 +170,56 @@
                                 </span>
                             </div>
                         </div>
-
+                        <app-commentaire
+                            [isOpen]="isComment"
+                            (closed)="closeComment()"></app-commentaire>
                     </div>
-                    <div class="w-1/2 max-md:w-full h-full flex-col flex justify-around items-start pl-10 border">
-                        <p class="text-3xl max-sm:text-2xl text-left max-md:ml-5">
-                            Ce que les gens disent sur moi !
-                        </p>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        </p>
+
+                    <!-- card-comment container-->
+                    <div class="w-1/2 max-md:w-full h-auto relative justify-center items-center gap-2 min-lg:gap-y-2 max-sm:items-start || min-lg:pl-5 max-md:px-[12%] py-4 max-md:mt-4 || max-sm:flex max-sm:flex-col grid grid-cols-2 || ">
+                        
+                        <!-- card-comment content -->
+                        <div
+                            *ngFor="let comment of comments"
+                            class="w-68 max-md:w-full h-44 max-md:h-44 border rounded-xl bg-white flex flex-col relative">
+
+                            <div class="flex gap-x-1 font-light p-2">
+                                <!-- profile person comment -->
+                                <span class="material-icons text-purple-500 min-lg:text-gray-400 min-lg:group-hover:text-purple-500">
+                                    person
+                                </span>
+                                <span class="text-purple-500 min-lg:text-gray-400 min-lg:group-hover:text-purple-500 flex flex-col">
+                                    {{comment.name}}
+                                </span>
+                            </div>
+
+                            <!-- message comment -->
+                            <div class="pl-2 opacity-100 h-44 w-full overflow-hidden justify-start ">
+                                <p class="text-gray-700 text-sm p-2 text-balance">
+                                    {{comment.comment}}
+                                </p>
+                            </div>
+                            <div class="flex items-center justify-between relative h-6">
+                                <!-- appreciate comment -->
+                                <div>
+                                    <span class="material-icons text-purple-500 min-lg:text-gray-400 min-lg:group-hover:text-purple-500 p-2">
+                                        favorite
+                                    </span>
+                                </div>
+
+                                <!-- time comment -->
+                                <div class="flex items-center text-gray-500 text-xs p-2">
+                                    <span class="material-icons">
+                                        access_time
+    
+                                    </span>
+                                    <span class="text-gray-500 text-xs p-2">
+                                        12/10/2023
+                                    </span>
+                                </div>
+                            </div>
+    
+                        </div>
                     </div>
                     
                 </div>

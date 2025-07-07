@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Renderer2 } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { HeaderComponent } from '../header/header.component';
 import { fadeInDelay, slideInUp, slideInUpLong } from '../../shared/animations/animations';
@@ -21,4 +21,71 @@ import { CommentaireComponent } from './commentaire/commentaire.component';
 
 export class AboutComponent {
 
+    isComment = false;
+
+    constructor(private renderer: Renderer2){}
+
+    openComment(){
+        this.isComment = true;
+        // this.updateBodyScroll();
+        this.renderer.addClass(document.body, 'overflow-hidden')
+    }
+    closeComment(){
+        this.isComment = false;
+        // this.updateBodyScroll();
+        this.renderer.removeClass(document.body, 'overflow-hidden')
+    }
+
+    // updateBodyScroll(){
+    //     if(this.isComment){
+    //         this.renderer.addClass(document.body, 'overflow-x-hidden')
+    //     }else{
+    //         this.renderer.removeClass(document.body, 'overflow-x-hidden')
+    //     }
+    // }
+    
+    // updateBodyScrollOnStackOpen(){
+    //     this.renderer.addClass(document.body, 'overflow-hidden')
+    // }
+    // updateBodyScrollOnStackClose(){
+    //     this.renderer.removeClass(document.body, 'overflow-hidden')
+    // }
+    
+    
+    
+    // commentaires
+    comments = [
+        {
+            name: 'Nathan Sasa',
+            comment: 'Un développeur passionné par la création d\'applications web modernes et réactives. Toujours à la recherche de nouveaux défis et de technologies innovantes.',
+            date: '2023-10-01',
+            avatar: 'https://i.ibb.co/r2CrWZvn/profile.jpg',
+            job: 'Développeur Full Stack',
+            class: 'bg-purple-500 text-white'
+        },
+        {
+            name: 'Nathan Sasa',
+            comment: 'Un développeur passionné par la création d\'applications web modernes et réactives. Toujours à la recherche de nouveaux défis et de technologies innovantes.',
+            date: '2023-10-01',
+            avatar: 'https://i.ibb.co/r2CrWZvn/profile.jpg',
+            job: 'Développeur Full Stack',
+            class: 'bg-purple-500 text-white'
+        },
+        {
+            name: 'Nathan Sasa',
+            comment: 'Un développeur passionné par la création d\'applications web modernes et réactives. Toujours à la recherche de nouveaux défis et de technologies innovantes.',
+            date: '2023-10-01',
+            avatar: 'https://i.ibb.co/r2CrWZvn/profile.jpg',
+            job: 'Développeur Full Stack',
+            class: 'bg-purple-500 text-white'
+        },
+        {
+            name: 'Nathan Sasa',
+            comment: 'Un développeur passionné par la création d\'applications web modernes et réactives. Toujours à la recherche de nouveaux défis et de technologies innovantes.',
+            date: '2023-10-01',
+            avatar: 'https://i.ibb.co/r2CrWZvn/profile.jpg',
+            job: 'Développeur Full Stack',
+            class: 'bg-purple-500 text-white'
+        },
+    ]
 }

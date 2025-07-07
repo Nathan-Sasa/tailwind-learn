@@ -1,39 +1,23 @@
 <!-- section comment -->
-<section class="w-screen h-auto flex flex-col gap-y-4 items-center justify-center relative mt-10">
-    <!-- title -->
-    <h3
-        class=" w-full text-2xl lg:text-5xl text-black/50 mask-b-from-50% | flex items-center justify-center gap-x-2 mb-4 font-bold">
-        <i class="bi bi-chat-left-text-fill"></i>
-        <span>Commentaires</span>
-    </h3>
-
-    <!-- comment-container -->
-    <div class="w-full h-auto overflow-y-scroll overflow-x-hidden relative mb-5">
-        <!-- comment header -->
-        <p class="text-3xl max-sm:text-2xl font-bold text-left mb-5 ml-10 max-md:ml-5">
-            Ce que les gens disent sur moi !
-        </p>
-        <!-- comment content -->
-        <div
-            class="w-full h-auto flex flex-wrap justify-center items-center gap-5 px-10 max-md:px-5">
-
-            <article 
-                class="w-80 h-60 border border-purple-200 bg-white rounded-2xl"
-                >
-            </article>
-
-        </div>
-
-        <!-- add comment -->
-        <div>
-            <p>
-                Vous pouvez laisser un commentaire sur mon site, je serai ravi de le lire et de vous répondre.
-                <br>
-                Merci pour votre visite !
-            </p>
-        </div>
-        
-    </div>
+<section 
+    class="w-screen h-screen fixed inset-0 top-0 left-0 z-10000 bg-black/20 backdrop-blur-sm"
+    *ngIf="isOpen"
+    >
+    <!-- comment popup -->
+    <div class="w-full h-24 flex items-center justify-center relative">
+        <button
+            class="absolute top-5 left-5 z-50 text-gray-500 hover:text-purple-500 text-3xl transition duration-200 rounded-md h-10 w-10 border-2 border-gray-500 hover:border-purple-500 flex items-center justify-center cursor-pointer"
+            (click)="onClose()">
+            <i class="bi bi-x"></i>
+        </button>
+        <h3 class="text-2xl lg:text-5xl text-black/50 mask-b-from-50% | flex items-center justify-center gap-x-4">
+            <i class="bi bi-chat-left-text-fill"></i>
+            <span class="">
+                 commentaire
+            </span>
+        </h3>
+     </div>
+    
 </section>
 
 <!-- // Import the functions you need from the SDKs you need
