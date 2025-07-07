@@ -20,38 +20,29 @@ import { CommentaireComponent } from './commentaire/commentaire.component';
 })
 
 export class AboutComponent {
-
     isComment = false;
 
     constructor(private renderer: Renderer2){}
 
+    // ouverture du popup des commentaires
     openComment(){
-        this.isComment = true;
-        // this.updateBodyScroll();
-        this.renderer.addClass(document.body, 'overflow-hidden')
-    }
-    closeComment(){
-        this.isComment = false;
-        // this.updateBodyScroll();
-        this.renderer.removeClass(document.body, 'overflow-hidden')
+        this.isComment = !this.isComment;
+        this.updateBodyScroll();
     }
 
-    // updateBodyScroll(){
-    //     if(this.isComment){
-    //         this.renderer.addClass(document.body, 'overflow-x-hidden')
-    //     }else{
-    //         this.renderer.removeClass(document.body, 'overflow-x-hidden')
-    //     }
-    // }
-    
-    // updateBodyScrollOnStackOpen(){
-    //     this.renderer.addClass(document.body, 'overflow-hidden')
-    // }
-    // updateBodyScrollOnStackClose(){
-    //     this.renderer.removeClass(document.body, 'overflow-hidden')
-    // }
-    
-    
+    // fermeture du popup des commentaires
+    closeComment(){
+        this.isComment = false;
+        this.updateBodyScroll();
+    }
+    // empeche le scroll du body quand le popup est ouvert
+    updateBodyScroll(){
+        if(this.isComment){
+            this.renderer.addClass(document.body, 'overflow-x-hidden')
+        }else{
+            this.renderer.removeClass(document.body, 'overflow-x-hidden')
+        }
+    }
     
     // commentaires
     comments = [
