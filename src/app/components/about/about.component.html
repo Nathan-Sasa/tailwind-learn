@@ -132,13 +132,16 @@
                             Merci pour votre visite !
                         </p>
                         <div class="mt-4">
-                            <button 
+                            <button
+                                (click)="editCom()"
                                 class="w-50 h-12 rounded-lg bg-purple-500 text-white text-xl tracking-wider cursor-pointer hover:bg-purple-600"
-                                (click)="openComment()">
+                                >
                                 Commenter
                             </button>
                             
-                            <div class="flex items-center justify-between relative mt-4 w-50">
+                            <div 
+                                class="flex items-center justify-between relative mt-4 w-50"
+                                >
                                 <img 
                                     src="assets/img/profile/female-2835524_1280.jpg" 
                                     alt=""
@@ -164,10 +167,12 @@
                                     alt=""
                                     class="w-10 h-10 rounded-full border-white border-2 absolute left-[80px]"
                                 >
-                                <span class="text-gray-500 text-sm">
+                                <button 
+                                    class="text-gray-500 text-sm cursor-pointer hover:text-purple-500 transition-all duration-200"
+                                    (click)="openComment()">
                                     voir plus
                                     <i class="bi bi-arrow-right"></i>
-                                </span>
+                                </button>
                             </div>
                         </div>
                         <app-commentaire
@@ -176,10 +181,13 @@
                     </div>
 
                     <!-- card-comment container-->
-                    <div class="w-1/2 max-md:w-full h-auto relative justify-center items-center gap-2 min-lg:gap-y-2 max-sm:items-start || min-lg:pl-5 max-md:px-[12%] py-4 max-md:mt-4 || max-sm:flex max-sm:flex-col grid grid-cols-2 || ">
+                    <div 
+                        *ngIf="commentOnBody"
+                        class="w-1/2 max-md:w-full h-auto relative">
                         
                         <!-- card-comment content -->
-                        <div
+                        <div class="w-full h-full relative justify-center items-center gap-2 min-lg:gap-y-2 max-sm:items-start || min-lg:pl-5 max-md:px-[12%] py-4 max-md:mt-4 || max-sm:flex max-sm:flex-col grid grid-cols-2 || ">
+                            <div
                             *ngFor="let comment of comments"
                             class="w-68 max-md:w-full h-44 max-md:h-44 border rounded-xl bg-white flex flex-col relative">
 
@@ -218,10 +226,16 @@
                                     </span>
                                 </div>
                             </div>
-    
+                        </div>
                         </div>
                     </div>
-                    
+
+                    <!-- edit comment container -->
+                    <div
+                        *ngIf="editComment"
+                        class="w-1/2 max-md:w-full h-auto relative border">
+
+                    </div>
                 </div>
             </div>
         </div>

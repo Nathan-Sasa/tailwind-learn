@@ -9,6 +9,8 @@ import { Component, Input, Output, Renderer2, EventEmitter } from '@angular/core
 })
 export class CommentaireComponent {
 
+    constructor (private renderer: Renderer2){}
+
     @Input() isOpen = false;
     @Output() closed = new EventEmitter<void>();
 
