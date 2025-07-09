@@ -234,7 +234,35 @@
                     <div
                         *ngIf="editComment"
                         class="w-1/2 max-md:w-full h-auto relative border">
+                        <h2>Laisser un commentaire</h2>
 
+                        <form action="">
+                            <input 
+                                type="text"
+                                [(ngModel)]="nom"
+                                name="nom"
+                                placeholder="votre nom"
+                                required
+                            >
+                            <textarea
+                                [(ngModel)]="message" 
+                                name="message" 
+                                placeholder="votre message"
+                                required>
+                            </textarea>
+                            <div class="emoji-select">
+                                <label *ngFor="let e of emoji">
+                                    <input 
+                                        type="radio"
+                                        name="humeur"
+                                        [value]="e"
+                                        [(ngModel)]="humeur")]
+                                    >
+                                    {{ e }}
+                                </label>
+                            </div>
+                            <button type="submit">Envoyer</button>
+                        </form>
                     </div>
                 </div>
             </div>

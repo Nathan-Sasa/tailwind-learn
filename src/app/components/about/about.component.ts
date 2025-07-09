@@ -3,16 +3,21 @@ import { RouterModule } from '@angular/router';
 import { HeaderComponent } from '../header/header.component';
 import { fadeInDelay, slideInUp, slideInUpLong } from '../../shared/animations/animations';
 import { CommonModule, NgIf } from '@angular/common';
+import { FormsModule} from '@angular/forms'
+
 import { EducationComponent } from './education/education.component';
 import { LocationComponent } from './location/location.component';
 // import { IntersectionAnimationDirective } from '../../directives/intersection-animation.directive';
 import { SkillsComponent } from './skills/skills.component';
 import { StacksComponent } from './stacks/stacks.component';
 import { CommentaireComponent } from './commentaire/commentaire.component';
+import { CommentaireService } from './commentaire/commentaire.service';
+import { Commentaire } from './commentaire/commentaire.model';
+
 
 @Component({
   selector: 'app-about',
-  imports: [RouterModule, NgIf, HeaderComponent, EducationComponent, SkillsComponent, CommonModule,StacksComponent, CommentaireComponent],
+  imports: [RouterModule, HeaderComponent, EducationComponent, SkillsComponent, CommonModule,StacksComponent, CommentaireComponent, FormsModule],
   standalone: true,
   templateUrl: './about.component.html',
   styleUrl: './about.component.css',
@@ -24,7 +29,16 @@ export class AboutComponent {
     commentOnBody = true
     editComment = false
 
-    constructor(private renderer: Renderer2){}
+    // editing comment
+    nom = '';
+    message= '';
+    humeur: '😕' | '🙂' | '😀' | '' = '';
+    emoji: ('😕' | '🙂' | '😀')[]= ['😕' , '🙂' , '😀']
+
+    constructor(
+        private renderer: Renderer2,
+        private commentaireService: CommentaireService
+    ){}
 
     // ouverture du popup des commentaires
     openComment(){
@@ -56,7 +70,25 @@ export class AboutComponent {
         this.editCom()
     }
     
-    // commentaires
+    // =================== editing comment ================
+    envoyerCommentaire(){
+        if(!this.nom || !this.message || !this.humeur) return;
+
+        const nouveauxCommentaire: Commentaire = {
+            nom: this.nom,
+            message: this.message,
+            humeur: this.humeur,
+            date: new Date().toISOString()
+        }
+
+        this.commentaireService.ajouterCommentaire(nouveauxCommentaire).then(() => {
+            this.nom = '';
+            this.message = '';
+            this.humeur= '';
+        })
+    }
+
+    // ================= comments models ============
     comments = [
         {
             name: 'Nathan Sasa',
