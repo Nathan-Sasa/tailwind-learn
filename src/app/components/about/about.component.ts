@@ -1,8 +1,8 @@
-import { Component, Renderer2 } from '@angular/core';
+import { Component, OnInit, Renderer2 } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { HeaderComponent } from '../header/header.component';
 import { fadeInDelay, slideInUp, slideInUpLong } from '../../shared/animations/animations';
-import { CommonModule, NgIf } from '@angular/common';
+import { CommonModule } from '@angular/common';
 import { FormsModule} from '@angular/forms'
 
 import { EducationComponent } from './education/education.component';
@@ -24,21 +24,27 @@ import { Commentaire } from './commentaire/commentaire.model';
   animations: [slideInUpLong, slideInUp, fadeInDelay]
 })
 
-export class AboutComponent {
+export class AboutComponent implements OnInit {
     isComment = false;
     commentOnBody = true
     editComment = false
+    
 
     // editing comment
     nom = '';
     message= '';
-    humeur: '😕' | '🙂' | '😀' | '' = '';
-    emoji: ('😕' | '🙂' | '😀')[]= ['😕' , '🙂' , '😀']
+    appreciation: 'text-red-500' | 'text-orange-500' | 'text-blue-500' | '' = '';
+    emojis: ('😕' | '🙂' | '😀')[]= ['😕' , '🙂' , '😀']
 
     constructor(
         private renderer: Renderer2,
-        private commentaireService: CommentaireService
-    ){}
+        private commentaireService: CommentaireService,
+    ){ }
+
+    // test firestore commentaire
+    ngOnInit(): void {
+        this.commentaireService.ajouterCommentaireTest()
+    }
 
     // ouverture du popup des commentaires
     openComment(){
@@ -65,26 +71,29 @@ export class AboutComponent {
     editCom(){
         this.commentOnBody = !this.commentOnBody
         this.editComment = !this.editComment
+
+        if(!this.commentOnBody){
+            this.renderer.addClass(document.body, 'overflow-y-hidden')
+        }else{
+            this.renderer.removeClass(document.body, 'overflow-y-hidden')
+        }
     }
-    updateEditComment(){
-        this.editCom()
-    }
-    
+
     // =================== editing comment ================
     envoyerCommentaire(){
-        if(!this.nom || !this.message || !this.humeur) return;
+        if(!this.nom || !this.message || !this.appreciation) return;
 
         const nouveauxCommentaire: Commentaire = {
             nom: this.nom,
             message: this.message,
-            humeur: this.humeur,
+            appreciation: this.appreciation,
             date: new Date().toISOString()
         }
 
         this.commentaireService.ajouterCommentaire(nouveauxCommentaire).then(() => {
             this.nom = '';
             this.message = '';
-            this.humeur= '';
+            this.appreciation= '';
         })
     }
 

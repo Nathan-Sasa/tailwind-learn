@@ -1,25 +1,52 @@
 <!-- section comment -->
+<!-- comment popup -->
 <section 
-    class="w-screen h-screen fixed inset-0 top-0 left-0 z-10000 bg-black/20 backdrop-blur-sm"
+    class="w-screen h-screen fixed flex justify-center max-[810px]:items-end inset-0 top-0 left-0 z-10000 bg-black/20 backdrop-blur-xs"
     *ngIf="isOpen"
     >
-    <!-- comment popup -->
-    <div class="w-full h-24 flex items-center justify-center relative">
-        <button
-            class="absolute top-7 left-5 z-50 text-gray-500 hover:text-purple-500 text-3xl transition duration-200 rounded-md h-10 w-10 border-2 border-gray-500 hover:border-purple-500 flex items-center justify-center cursor-pointer"
-            (click)="onClose()">
-            <i class="bi bi-x"></i>
-        </button>
-        <h3 class="text-2xl lg:text-5xl text-black/50 mask-b-from-50% | flex items-center justify-center gap-x-4">
-            <i class="bi bi-chat-left-text-fill"></i>
-            <span class="">
-                 commentaire
-            </span>
-        </h3>
-    </div>
+    <div class="bg-white/50 backdrop-blur-xs border border-gray-500/50 rounded-xl px-2 || w-2/4 max-[810px]:w-4/4 max-[810px]:h-11/12 max-[810px]:rounded-b-none min-lg:rounded-none relative">
+        <div class="w-full h-20 border-b-2 border-gray-400 flex items-center justify-center relative">
+            <button
+                class="absolute top-5 left-0 z-50 text-gray-500 hover:text-purple-500 text-3xl transition duration-200 rounded-md h-7 w-7 border-2 border-gray-500 hover:border-purple-500 flex items-center justify-center cursor-pointer"
+                (click)="onClose()">
+                <i class="bi bi-x"></i>
+            </button>
+            <h3 class="text-2xl lg:text-5xl text-black/50 mask-b-from-50% | flex items-center justify-center gap-x-4">
+                <i class="bi bi-chat-left-text-fill"></i>
+                <span class="">
+                     commentaire
+                </span>
+            </h3>
+        </div>
+    
+        <!-- affiche-container comment -->
+        <div class="w-full lg:h-9/10 overflow-y-scroll pt-4 relative pb-4 ||">
+            <div></div>
+            <div 
+                *ngFor="let com of commentaires"
+                class="w-full h-auto">
+                <div class="profileImg flex items-center gap-x-2 mt-4">
+                    <i class="bi bi-person-fill text-xl text-gray-500"></i>
+                    <strong class="text-gray-500 tracking-wider">
+                        {{com.nom}}
+                    </strong>
+                </div>
+                <div class="content">
+                    <div class="message ml-7 text- text-justify font-light || ">
+                        {{com.message}}
+                    </div>
+                    <div class="interaction flex items-center ml-7 mt-4 justify-between border-b border-gray-400">
+                        <span
+                            *ngIf="com.date">
+                            <!-- {{c.date.toDate() | date:'short'}} -->
+                             <!-- {{c.date.toDate() | date:'short'}} -->
+                        </span>
+                        <i class="bi bi-star-fill {{com.appreciation}}"></i>
+                    </div>
+                </div>
+            </div>
 
-    <!-- forme-container comment -->
-    <div class="w-full lg:h-9/10 border">
+        </div>
 
     </div>
     

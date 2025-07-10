@@ -35,17 +35,17 @@ export class StacksComponent {
 
     updateBodyScroll(){
         if(this.isStackInfo){
-            this.renderer.addClass(document.body, 'overflow-hidden')
+            this.renderer.addClass(document.body, 'overflow-y-hidden')
         }else{
-            this.renderer.removeClass(document.body, 'overflow-hidden')
+            this.renderer.removeClass(document.body, 'overflow-y-hidden')
         }
     }
     
     updateBodyScrollOnStackOpen(){
-        this.renderer.addClass(document.body, 'overflow-hidden')
+        this.renderer.addClass(document.body, 'overflow-y-hidden')
     }
     updateBodyScrollOnStackClose(){
-        this.renderer.removeClass(document.body, 'overflow-hidden')
+        this.renderer.removeClass(document.body, 'overflow-y-hidden')
     }
 
 

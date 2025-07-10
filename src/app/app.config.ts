@@ -7,12 +7,13 @@ import {provideFirebaseApp, initializeApp} from '@angular/fire/app';
 import {provideFirestore, getFirestore  } from '@angular/fire/firestore';
 
 // import { routes } from './app.routes';
-import { environment } from '../environments/environment';
+
 import { HomeComponent } from './components/home/home.component';
 import { ProjetComponent } from './components/projet/projet.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { AboutComponent } from './components/about/about.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { environment } from '../environments/environment';
 
 const routes: Routes = [
     {path: 'home', component: HomeComponent},
@@ -37,7 +38,6 @@ export const appConfig: ApplicationConfig = {
             routes,
         ),
         provideAnimations(),
-        // @ts-ignore
         provideFirebaseApp(() => initializeApp(environment.firebase)),
         provideFirestore(() => getFirestore()),
     ]

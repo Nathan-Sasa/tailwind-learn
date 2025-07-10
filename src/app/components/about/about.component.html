@@ -107,7 +107,7 @@
         <app-stacks></app-stacks>
         <app-skills></app-skills>
         <!-- <app-commentaire></app-commentaire> -->
-        
+
         <!-- comment section  -->
         <div class="w-full max-md:h-auto min-lg:h-130 flex flex-col gap-y-4 items-center justify-start relative mt-10">
             <h3
@@ -136,38 +136,39 @@
                                 (click)="editCom()"
                                 class="w-50 h-12 rounded-lg bg-purple-500 text-white text-xl tracking-wider cursor-pointer hover:bg-purple-600"
                                 >
-                                Commenter
+                                <span *ngIf="!editComment"> Commenter </span>
+                                <span *ngIf="editComment">Retour</span>
                             </button>
-                            
-                            <div 
+
+                            <div
                                 class="flex items-center justify-between relative mt-4 w-50"
                                 >
-                                <img 
-                                    src="assets/img/profile/female-2835524_1280.jpg" 
+                                <img
+                                    src="assets/img/profile/female-2835524_1280.jpg"
                                     alt=""
                                     class="w-10 h-10 rounded-full border-white border-2"
                                 >
-                                <img 
-                                    src="assets/img/profile/man-1690965_1280.jpg" 
+                                <img
+                                    src="assets/img/profile/man-1690965_1280.jpg"
                                     alt=""
                                     class="w-10 h-10 rounded-full border-white border-2 absolute left-[20px]"
                                 >
-                                <img 
-                                    src="assets/img/profile/man-1281562_1280.jpg" 
+                                <img
+                                    src="assets/img/profile/man-1281562_1280.jpg"
                                     alt=""
                                     class="w-10 h-10 rounded-full border-white border-2 absolute left-[40px]"
                                 >
-                                <img 
-                                    src="assets/img/profile/man-1845715_1280.jpg" 
+                                <img
+                                    src="assets/img/profile/man-1845715_1280.jpg"
                                     alt=""
                                     class="w-10 h-10 rounded-full border-white border-2 absolute left-[60px]"
                                 >
-                                <img 
-                                    src="assets/img/profile/portrait-7604619_1280.jpg" 
+                                <img
+                                    src="assets/img/profile/portrait-7604619_1280.jpg"
                                     alt=""
                                     class="w-10 h-10 rounded-full border-white border-2 absolute left-[80px]"
                                 >
-                                <button 
+                                <button
                                     class="text-gray-500 text-sm cursor-pointer hover:text-purple-500 transition-all duration-200"
                                     (click)="openComment()">
                                     voir plus
@@ -181,10 +182,10 @@
                     </div>
 
                     <!-- card-comment container-->
-                    <div 
+                    <div
                         *ngIf="commentOnBody"
                         class="w-1/2 max-md:w-full h-auto relative">
-                        
+
                         <!-- card-comment content -->
                         <div class="w-full h-full relative justify-center items-center gap-2 min-lg:gap-y-2 max-sm:items-start || min-lg:pl-5 max-md:px-[12%] py-4 max-md:mt-4 || max-sm:flex max-sm:flex-col grid grid-cols-2 || ">
                             <div
@@ -219,7 +220,7 @@
                                 <div class="flex items-center text-gray-500 text-xs p-2">
                                     <span class="material-icons">
                                         access_time
-    
+
                                     </span>
                                     <span class="text-gray-500 text-xs p-2">
                                         12/10/2023
@@ -233,35 +234,45 @@
                     <!-- edit comment container -->
                     <div
                         *ngIf="editComment"
-                        class="w-1/2 max-md:w-full h-auto relative border">
+                        class="w-1/2 max-md:w-full h-auto relative flex flex-col justify-between items-center gap-y-4">
                         <h2>Laisser un commentaire</h2>
 
-                        <form action="">
-                            <input 
+                        <form
+                            class="w-full h-auto flex flex-col gap-y-2 || "
+                            (ngSubmit)="envoyerCommentaire()">
+                            <label
+                                class="text-gray-500 font-extralight tracking-widest focus:text-purple-500">
+                                votre nom :
+                                <input
                                 type="text"
                                 [(ngModel)]="nom"
                                 name="nom"
-                                placeholder="votre nom"
+                                placeholder=""
                                 required
+                                class="border-b-2 border-gray-400 focus:border-transparent focus:outline-2 focus:outline-purple-500 pl-2 text-sm text-black tracking-wider font-normal"
                             >
+                            </label>
                             <textarea
-                                [(ngModel)]="message" 
-                                name="message" 
+                                [(ngModel)]="message"
+                                name="message"
                                 placeholder="votre message"
-                                required>
+                                required
+                                class=" border-2 border-gray-400 rounded-md resize-none focus:border-transparent focus:outline-2 focus:outline-purple-500 || max-h-44 h-44 overflow-hidden placeholder:text-gray-400 px-2 placeholder:font-extralight placeholder:tracking-widest tracking-wider font-light text-balance">
                             </textarea>
                             <div class="emoji-select">
-                                <label *ngFor="let e of emoji">
-                                    <input 
+                                <label *ngFor="let e of emojis">
+                                    <input
                                         type="radio"
                                         name="humeur"
                                         [value]="e"
-                                        [(ngModel)]="humeur")]
+                                        [(ngModel)]="appreciation"
                                     >
                                     {{ e }}
                                 </label>
                             </div>
-                            <button type="submit">Envoyer</button>
+                            <button
+                                class="bg-purple-500 h-8 rounded-md hover:bg-purple-400 text-white font-light tracking-wider cursor-pointer" 
+                                type="submit">Envoyer</button>
                         </form>
                     </div>
                 </div>
