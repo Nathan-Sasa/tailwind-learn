@@ -7,4 +7,5 @@ export interface Commentaire {
     appreciation: 'pas assez' | 'pas mal' | 'bien';
     // date: string | Timestamp | Date | undefined; // date du commentaire
     date: Date;
+    relativeDate?: string;
 }

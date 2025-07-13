@@ -40,7 +40,8 @@
                             *ngIf="com.date"
                             class="text-xs text-gray-400">
                             <!-- {{com.date | date: 'short'}} -->
-                            {{ com.date | date: 'dd MMMM yyyy à HH:mm' : 'fr'}}
+                            <!-- {{ com.date | date: 'dd MMMM yyyy à HH:mm' : 'fr'}} -->
+                              Publié {{com.relativeDate}}
                         </span>
                         <i class="bi bi-star-fill {{com.appreciation}}"></i>
                     </div>
