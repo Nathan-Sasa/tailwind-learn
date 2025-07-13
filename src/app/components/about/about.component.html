@@ -257,17 +257,28 @@
                                 name="message"
                                 placeholder="votre message"
                                 required
-                                class=" border-2 border-gray-400 rounded-md resize-none focus:border-transparent focus:outline-2 focus:outline-purple-500 || max-h-44 h-44 overflow-hidden placeholder:text-gray-400 px-2 placeholder:font-extralight placeholder:tracking-widest tracking-wider font-light text-balance">
+                                class=" border-2 border-gray-400 rounded-md resize-none focus:border-transparent focus:outline-2 focus:outline-purple-500 || max-h-40 h-40 overflow-hidden placeholder:text-gray-400 px-2 placeholder:font-extralight placeholder:tracking-widest tracking-wider font-light text-balance">
                             </textarea>
-                            <div class="emoji-select">
-                                <label *ngFor="let e of emojis">
+                            <span>Appreciation : </span>
+                            <div class="emoji-select flex gap-x-4">
+                                <label 
+                                    *ngFor="let c of choice"
+                                    class="  ">
                                     <input
                                         type="radio"
-                                        name="humeur"
-                                        [value]="e"
+                                        name="appreciation"
+                                        [value]="c"
                                         [(ngModel)]="appreciation"
-                                    >
-                                    {{ e }}
+                                        class="cursor-pointer accent-purple-500"
+                                        >
+                                    <!-- <i 
+                                        class="bi bi-star-fill ml-2 cursor-pointer {{emojis}}">
+                                    </i> -->
+                                    <span
+                                        class="cursor-pointer">
+                                        {{c}}
+                                        
+                                    </span>
                                 </label>
                             </div>
                             <button

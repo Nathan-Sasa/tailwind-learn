@@ -29,12 +29,14 @@ export class AboutComponent implements OnInit {
     commentOnBody = true
     editComment = false
     
-
     // editing comment
     nom = '';
     message= '';
-    appreciation: 'text-red-500' | 'text-orange-500' | 'text-blue-500' | '' = '';
-    emojis: ('😕' | '🙂' | '😀')[]= ['😕' , '🙂' , '😀']
+    appreciation: 'pas assez' | 'pas mal' | 'bien' | '' = '';
+    emojis: ('text-red-500' | 'text-orange-500' | 'text-blue-500')[]= ['text-red-500' , 'text-orange-500' , 'text-blue-500']
+    choice: ('pas assez' | 'pas mal' | 'bien')[] = ['pas assez' , 'pas mal' , 'bien'];
+
+
 
     constructor(
         private renderer: Renderer2,
@@ -87,7 +89,7 @@ export class AboutComponent implements OnInit {
             nom: this.nom,
             message: this.message,
             appreciation: this.appreciation,
-            date: new Date().toISOString()
+            date: new Date()
         }
 
         this.commentaireService.ajouterCommentaire(nouveauxCommentaire).then(() => {

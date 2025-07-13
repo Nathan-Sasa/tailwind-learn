@@ -37,9 +37,10 @@
                     </div>
                     <div class="interaction flex items-center ml-7 mt-4 justify-between border-b border-gray-400">
                         <span
-                            *ngIf="com.date">
-                            <!-- {{c.date.toDate() | date:'short'}} -->
-                             <!-- {{c.date.toDate() | date:'short'}} -->
+                            *ngIf="com.date"
+                            class="text-xs text-gray-400">
+                            <!-- {{com.date | date: 'short'}} -->
+                            {{ com.date | date: 'dd MMMM yyyy à HH:mm' : 'fr'}}
                         </span>
                         <i class="bi bi-star-fill {{com.appreciation}}"></i>
                     </div>

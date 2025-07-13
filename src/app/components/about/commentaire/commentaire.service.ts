@@ -21,7 +21,7 @@ export class CommentaireService {
     ajouterCommentaire(commentaire: Commentaire){
         const commentaireAvecDate: Commentaire = {
             ...commentaire,
-            date: new Date().toISOString() // Ajoute la date actuelle
+            date: new Date() // Ajoute la date actuelle
         }
         return addDoc(this.commentaireRef, commentaireAvecDate)
     }

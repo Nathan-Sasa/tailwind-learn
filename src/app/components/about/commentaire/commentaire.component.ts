@@ -27,13 +27,13 @@ export class CommentaireComponent implements OnInit {
     }
 
     ngOnInit(): void {
-        this.commentaireService.getCommentaires().subscribe(data => {
-            this.commentaires = data
-                .map(com => ({
-                    ...com,
-                    date: (com.date instanceof Timestamp) ? com.date.toDate() : com.date
-                }))
-                .sort((a, b) => b.date.getTime() - a.date.getTime())
+        this.commentaireService.getCommentaires().subscribe((data: any[]) => {
+            console.log(data);
+
+            this.commentaires = data.map(com => ({
+                ...com,
+                date: (com.date as Timestamp).toDate() as Date
+            })) 
         })
     }
 }
