@@ -32,24 +32,24 @@ export class CommentaireComponent implements OnInit {
         this.commentaireService.getCommentaires().subscribe((data: any[]) => {
             console.log(data);
 
-            // this.commentaires = data.map(com => ({
-            //     ...com,
-            //     date: (com.date as Timestamp).toDate() as Date
-            // })) 
+            this.commentaires = data.map(com => ({
+                ...com,
+                date: (com.date as Timestamp).toDate() as Date
+            })) 
 
-            this.commentaires = data
-                .map((doc) => {
-                    const commentaire = doc.payload.doc.data() as Commentaire;
-                    const timestamp = (commentaire.date as any)?.toDate?.();
-                    return {
-                        ...commentaire,
-                        date: timestamp,
-                        relativeDate: timestamp
-                            ? formatDistanceToNow(timestamp, {addSuffix: true, locale: fr})
-                            : '',
-                    }
-                })
-                .sort((a ,b) => b.date.getTime() - a.date.getTime());
+            // this.commentaires = data
+            //     .map((doc) => {
+            //         const commentaire = doc.payload.doc.data() as Commentaire;
+            //         const timestamp = (commentaire.date as any)?.toDate?.();
+            //         return {
+            //             ...commentaire,
+            //             date: timestamp,
+            //             relativeDate: timestamp
+            //                 ? formatDistanceToNow(timestamp, {addSuffix: true, locale: fr})
+            //                 : '',
+            //         }
+            //     })
+            //     .sort((a ,b) => b.date.getTime() - a.date.getTime());
         })
     }
 }
