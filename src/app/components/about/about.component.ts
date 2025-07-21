@@ -1,4 +1,4 @@
-import { Component, OnInit, Renderer2 } from '@angular/core';
+import { Component, ElementRef, OnInit, Renderer2, ViewChild, viewChild } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { HeaderComponent } from '../header/header.component';
 import { fadeInDelay, slideInUp, slideInUpLong } from '../../shared/animations/animations';
@@ -28,7 +28,7 @@ export class AboutComponent implements OnInit {
     isComment = false;
     commentOnBody = true
     editComment = false
-    
+
     // editing comment
     nom = '';
     message= '';
@@ -45,7 +45,8 @@ export class AboutComponent implements OnInit {
 
     // test firestore commentaire
     ngOnInit(): void {
-        this.commentaireService.ajouterCommentaireTest()
+        // this.commentaireService.ajouterCommentaireTest()
+        this.commentaireService.getCommentaires()
     }
 
     // ouverture du popup des commentaires
@@ -78,6 +79,17 @@ export class AboutComponent implements OnInit {
             this.renderer.addClass(document.body, 'overflow-y-hidden')
         }else{
             this.renderer.removeClass(document.body, 'overflow-y-hidden')
+        }
+    }
+    
+    @ViewChild('commentaireBody') commentaireBody!: ElementRef;
+
+    scrollToCommentaireBody() {
+        if (this.commentaireBody) {
+            this.commentaireBody.nativeElement.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
         }
     }
 

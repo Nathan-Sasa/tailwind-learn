@@ -1,6 +1,6 @@
 <!-- section comment -->
 <!-- comment popup -->
-<section 
+<section
     class="w-screen h-screen fixed flex justify-center max-[810px]:items-end inset-0 top-0 left-0 z-10000 bg-black/20 backdrop-blur-xs"
     *ngIf="isOpen"
     >
@@ -18,29 +18,35 @@
                 </span>
             </h3>
         </div>
-    
+
         <!-- affiche-container comment -->
         <div class="w-full lg:h-9/10 overflow-y-scroll pt-4 relative pb-4 ||">
-            <div></div>
-            <div 
+            <div
+                *ngIf="!commentaires.length"
+                class="w-full h-full flex items-center justify-center">
+                <p class="text-gray-500 text-lg">
+                    Aucun commentaire pour le moment
+                </p>
+            </div>
+            <div
                 *ngFor="let com of commentaires"
                 class="w-full h-auto">
                 <div class="profileImg flex items-center gap-x-2 mt-4">
                     <i class="bi bi-person-fill text-xl text-gray-500"></i>
-                    <strong class="text-gray-500 tracking-wider">
+                    <strong class="text-gray-500 tracking-wider capitalize">
                         {{com.nom}}
                     </strong>
                 </div>
                 <div class="content">
-                    <div class="message ml-7 text- text-justify font-light || ">
+                    <div class="message ml-7 text- text-balance font-light || ">
                         {{com.message}}
                     </div>
                     <div class="interaction flex items-center ml-7 mt-4 justify-between border-b border-gray-400">
                         <span
                             *ngIf="com.date"
                             class="text-xs text-gray-400">
-                            <!-- {{com.date | date: 'short'}} -->
-                            {{ com.date | date: 'dd MMMM yyyy à HH:mm' : 'fr'}}
+                            <!-- Publié le {{com.date | date: 'short' : 'fr'}} -->
+                            Publié le {{ com.date | date: 'dd MMMM yyyy à HH:mm' : 'fr'}}
                               <!-- Publié {{com.relativeDate}} -->
                         </span>
                         <i class="bi bi-star-fill {{com.appreciation}}"></i>
@@ -51,7 +57,7 @@
         </div>
 
     </div>
-    
+
 </section>
 
 <!-- // Import the functions you need from the SDKs you need
