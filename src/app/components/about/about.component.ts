@@ -6,18 +6,17 @@ import { CommonModule } from '@angular/common';
 import { FormsModule} from '@angular/forms'
 
 import { EducationComponent } from './education/education.component';
-import { LocationComponent } from './location/location.component';
-// import { IntersectionAnimationDirective } from '../../directives/intersection-animation.directive';
 import { SkillsComponent } from './skills/skills.component';
 import { StacksComponent } from './stacks/stacks.component';
 import { CommentaireComponent } from './commentaire/commentaire.component';
 import { CommentaireService } from './commentaire/commentaire.service';
 import { Commentaire } from './commentaire/commentaire.model';
+import { CommentAnimationDirective } from '../../directives/comment/comment-animation.directive';
 
 
 @Component({
   selector: 'app-about',
-  imports: [RouterModule, HeaderComponent, EducationComponent, SkillsComponent, CommonModule,StacksComponent, CommentaireComponent, FormsModule],
+  imports: [RouterModule, HeaderComponent, EducationComponent, SkillsComponent, CommonModule,StacksComponent, CommentaireComponent, FormsModule, CommentAnimationDirective],
   standalone: true,
   templateUrl: './about.component.html',
   styleUrl: './about.component.css',

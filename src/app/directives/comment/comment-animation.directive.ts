@@ -1,9 +1,11 @@
+
 import { AfterViewInit, Directive, ElementRef, OnDestroy, Renderer2 } from '@angular/core';
 
+
 @Directive({
-  selector: '[appSkillAnimation]'
+  selector: '[appCommentAnimation]'
 })
-export class SkillAnimationDirective implements AfterViewInit, OnDestroy{
+export class CommentAnimationDirective implements AfterViewInit, OnDestroy{
 
     private observer!: IntersectionObserver;
 
@@ -23,7 +25,7 @@ export class SkillAnimationDirective implements AfterViewInit, OnDestroy{
                 }
             },
             {
-                threshold: .6
+                threshold: .2
             }
         );
         this.observer.observe(this.el.nativeElement);
@@ -35,3 +37,4 @@ export class SkillAnimationDirective implements AfterViewInit, OnDestroy{
         }
     }
 }
+

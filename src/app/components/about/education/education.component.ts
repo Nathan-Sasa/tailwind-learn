@@ -3,10 +3,11 @@ import { Component } from '@angular/core';
 import { fadeInDelay, fadeInDelayXl, fadeInDelayXxl, slideInDown, slideInRight, slideInUp, slideInUpLong, slideInUpLongXl, slideInUpLongXxl} from '../../../shared/animations/animations';
 import { IntersectionAnimationDirective } from '../../../directives/intersection-animation.directive';
 import { SkillAnimationDirective } from '../skills/skill-animation.directive';
+import { CommentAnimationDirective } from '../../../directives/comment/comment-animation.directive';
 
 @Component({
   selector: 'app-education',
-  imports: [NgFor, CommonModule, SkillAnimationDirective],
+  imports: [NgFor, CommonModule, SkillAnimationDirective, CommentAnimationDirective],
   standalone: true,
   templateUrl: './education.component.html',
   styleUrl: './education.component.css',
