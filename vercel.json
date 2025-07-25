@@ -4,5 +4,12 @@
             "source": "/(.*)",
             "destination": "/index.html"
         }
+    ],
+    "routes": [
+        {
+            "handler": "filesystem",
+            "src": "/.*",
+            "dest": "/index.html"
+        }
     ]
 }
