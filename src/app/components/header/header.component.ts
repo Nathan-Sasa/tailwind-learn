@@ -15,7 +15,8 @@ export class HeaderComponent {
     public dev = {
         DevName : "Nathan Sasa",
         Pseudo: "NathDev",
-        profile: "https://i.ibb.co/r2CrWZvn/profile.jpg",
+        // profile: "https://i.ibb.co/r2CrWZvn/profile.jpg",
+        profile: "nbsProfile.png",
         img1: "",
     }
     isMenuOpen = false;
