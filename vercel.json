@@ -1,18 +1,6 @@
 {
-    "version": 2,
-    " builds": [
-    {
-        "src": "package.json",
-        "use": "@vercel/static-build",
-        "config": {
-            "distDir": "dist/tailwind-learn/browser"
-        }
-    }
-],
-    "routes": [
-        {
-            "src": "/(.*)",
-            "dest": "/index.html"
-        }
+    "$schema": "https://openapi.vercel.sh/vercel.json",
+    "redirects": [
+      { "source": "/(.*)", "destination": "/index.html", "permanent": true }
     ]
 }
