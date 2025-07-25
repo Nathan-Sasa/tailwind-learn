@@ -44,12 +44,14 @@
                     <div class="interaction flex items-center ml-7 mt-4 justify-between border-b border-gray-400">
                         <span
                             *ngIf="com.date"
-                            class="text-xs text-gray-400">
+                            class="text-xs text-purple-600">
                             <!-- Publié le {{com.date | date: 'short' : 'fr'}} -->
                             Publié le {{ com.date | date: 'dd MMMM yyyy à HH:mm' : 'fr'}}
                               <!-- Publié {{com.relativeDate}} -->
                         </span>
-                        <i class="bi bi-star-fill {{com.appreciation}}"></i>
+                        <span class="">
+                            {{com.appreciation}}
+                        </span>
                     </div>
                 </div>
             </div>

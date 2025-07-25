@@ -113,32 +113,32 @@ export class AboutComponent implements OnInit {
     // ================= comments models ============
     comments = [
         {
-            name: 'Nathan Sasa',
-            comment: 'Un développeur passionné par la création d\'applications web modernes et réactives. Toujours à la recherche de nouveaux défis et de technologies innovantes.',
+            name: 'Steve',
+            comment: 'J\'aime bien votre détermination et votre passion pour le développement web. Continuez à apprendre et à vous améliorer !',
             date: '2023-10-01',
             avatar: 'https://i.ibb.co/r2CrWZvn/profile.jpg',
             job: 'Développeur Full Stack',
             class: 'bg-purple-500 text-white'
         },
         {
-            name: 'Nathan Sasa',
-            comment: 'Un développeur passionné par la création d\'applications web modernes et réactives. Toujours à la recherche de nouveaux défis et de technologies innovantes.',
+            name: 'Marius',
+            comment: 'Merci pour le travail que vous avez, j\'ai beaucoup apprécié !',
             date: '2023-10-01',
             avatar: 'https://i.ibb.co/r2CrWZvn/profile.jpg',
             job: 'Développeur Full Stack',
             class: 'bg-purple-500 text-white'
         },
         {
-            name: 'Nathan Sasa',
-            comment: 'Un développeur passionné par la création d\'applications web modernes et réactives. Toujours à la recherche de nouveaux défis et de technologies innovantes.',
+            name: 'Héritier Mokoli',
+            comment: 'Vous avez un excellent portfolio et une belle présentation de vos compétences. J\'aime beaucoup votre style de développement !',
             date: '2023-10-01',
             avatar: 'https://i.ibb.co/r2CrWZvn/profile.jpg',
             job: 'Développeur Full Stack',
             class: 'bg-purple-500 text-white'
         },
         {
-            name: 'Nathan Sasa',
-            comment: 'Un développeur passionné par la création d\'applications web modernes et réactives. Toujours à la recherche de nouveaux défis et de technologies innovantes.',
+            name: 'Darilson Yussuf',
+            comment: 'J\'ai été impressionné par votre portfolio et vos compétences en développement web. Vous avez un bel avenir devant vous ! Un de ces jours nous pourrons travailler ensemble !',
             date: '2023-10-01',
             avatar: 'https://i.ibb.co/r2CrWZvn/profile.jpg',
             job: 'Développeur Full Stack',

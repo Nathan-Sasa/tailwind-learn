@@ -263,7 +263,9 @@
                                 required
                                 class=" border-2 border-gray-400 rounded-md resize-none focus:border-transparent focus:outline-2 focus:outline-purple-500 || max-h-40 h-40 overflow-hidden placeholder:text-gray-400 px-2 placeholder:font-extralight placeholder:tracking-widest tracking-wider font-light text-balance">
                             </textarea>
-                            <span>Appreciation : </span>
+                            <span class="font-extralight text-gray-500 tracking-widest">
+                                Appreciation : 
+                            </span>
                             <div class="emoji-select flex gap-x-4">
                                 <label
                                     *ngFor="let c of choice"
@@ -273,12 +275,13 @@
                                         name="appreciation"
                                         [value]="c"
                                         [(ngModel)]="appreciation"
+                                        required
                                         class="cursor-pointer accent-purple-500"
                                         >
                                     <!-- <i
                                         class="bi bi-star-fill ml-2 cursor-pointer {{emojis}}">
                                     </i> -->
-                                    <span
+                                    <span 
                                         class="cursor-pointer">
                                         {{c}}
 

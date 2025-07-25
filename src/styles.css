@@ -9,6 +9,10 @@
     padding: 0;
     box-sizing: border-box;
 } */
+*::selection {
+    background-color: hsl(274, 80%, 62%);
+    color: white;
+}
 html{
     scroll-behavior: smooth;
     /* color: hsl(274, 80%, 62%); */
