@@ -9,3 +9,10 @@ export const environment = {
         appId: "1:71840867595:web:80c2d64e8eb78b9e96ee0e"
     }
 }
+
+// {
+//     "$schema": "https://openapi.vercel.sh/vercel.json",
+//     "redirects": [
+//       { "source": "/(.*)", "destination": "/index.html", "permanent": true }
+//     ]
+// }
