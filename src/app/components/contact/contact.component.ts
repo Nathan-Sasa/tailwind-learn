@@ -17,9 +17,26 @@ export class ContactComponent {
     submitted = false;
     error = false;
 
-    onSubmit() {
-        this.submitted = true;
+    closeReceive(){
+        this.submitted = false;
         this.error = false;
+    }
+
+    // receive(){
+    //     this.submitted = true;
+    //     this.error = false;
+    // }
+    // receive(){
+    //     setTimeout(() => {
+    //         this.submitted = false;
+    //         this.error = false;
+    //     }, 
+    //     5000);
+    // }
+
+    onSubmit() {
+        // this.submitted = true;
+        // this.error = false;
         // Here you can handle the form submission, e.g., send data to a server
         const form = this.fromRef.nativeElement;
 
@@ -31,19 +48,19 @@ export class ContactComponent {
             },
         }).then((response) => {
             if (response.ok) {
+                this.submitted = true;
                 setTimeout(() => {
-                    this.submitted = true;
-                }, 5000);
-                form.reset();
+                    form.reset();
+                }, 1000);
             } else {
                 setTimeout(() => {
                     this.error = true;
-                }, 5000);
+                }, 3000);
             }
         }).catch(()=>{
             setTimeout(() => {
                 this.error = true;
-            }, 5000);
+            }, 3000);
         })
     }
 
