@@ -25,17 +25,23 @@
                 "src/nbsIcon.png",
                 "src/assets",
                 "src/_redirects",
+                "src/sitemap.xml",
                 {
-                "glob": "**/*",
-                "input": "public",
-                "output": "/"
-              }
-                ,
-              {
-                "glob": "_redirects",
-                "input": "public",
-                "output": "/"
-              }
+                    "glob": "**/*",
+                    "input": "public",
+                    "output": "/"
+                },
+
+                {
+                    "glob": "_redirects",
+                    "input": "public",
+                    "output": "/"
+                },
+                {
+                    "glob": "sitemap.xml",
+                    "input": "src",
+                    "output": "./"
+                }
             ],
             "styles": [
               "src/styles.css"
