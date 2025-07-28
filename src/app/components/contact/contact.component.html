@@ -12,15 +12,19 @@
                 </mask>
             </defs>
         </svg>
-        <div class="contact-container flex flex-col min-lg:flex-row max-md:overflow-y-scroll w-screen min-h-screen justify-center max-md:justify-start items-center gap-4 z-50 max-md:pb-6 min-[769px]:mt-18 min-lg:mt-0 relative || max-md:flex-col-reverse">
+        <div class="contact-container flex flex-col min-lg:flex-row max-md:overflow-y-scroll w-screen min-h-screen justify-center max-md:justify-start items-center gap-4 z-50 max-md:pb-6 min-[769px]:mt-18 min-lg:mt-0 relative || max-md:flex-col">
+            <h2 class="max-md:text-3xl text-4xl font-bold text-purple-500 flex items-center gap-4 mb-6 min-[769px]:mb-8">
+                <i class="bi bi-person-lines-fill"></i>
+                <span>Contact</span>
+            </h2>
             <form
                 #formRef
                 (submit)="onSubmit(); $event.preventDefault()"
                 target="_blank"
                 class="w-1/2 max-md:w-6/7 max-md:h-148 max-h-134 min-lg:ml-3 overflow-hidden bg-white/30 p-6 rounded-lg max-md:rounded-3xl shadow-lg backdrop-blur-md relative border-1 border-purple-500/50 || min-[769px]:flex min-[769px]:flex-col min-[769px]:w-[750px] || max-sm:max-h-150">
                 <h2
-                    class="text-3xl font-bold text-center mb-4 min-[769px]:mb-8 max-md:mb-4 text-purple-600">
-                    Contactez-moi
+                    class="text-xl font-bold text-center text-gray-500 mb-4 min-[769px]:mb-8 max-md:mb-4">
+                    Laissez-moi un message
                 </h2>
                 <div class="input-container min-[769px]:grid gap-x-4 min-[769px]:grid-cols-2 max-md:grid-cols-1 min-[769px]:mb-4">
                     <div class="mb-2 max-md:mb-2">
@@ -129,7 +133,7 @@
                 (click)="closeReceive()"
                 class="text-4xl border-2 border-gray-4oo rounded-md w-10 h-10 flex items-center justify-center mt-4 text-gray-500 hover:text-purple-500 hover:border-purple-500 transition duration-200">
                 <i class="bi bi-x"></i>
-                
+
                 </button>
             </p>
             <p
@@ -143,7 +147,7 @@
                 (click)="closeReceive()"
                 class="text-4xl border-2 border-gray-4oo rounded-md w-10 h-10 flex items-center justify-center mt-4 text-gray-500 hover:text-purple-500 hover:border-purple-500 transition duration-200">
                 <i class="bi bi-x"></i>
-                
+
                 </button>
             </p>
             <!-- link socials reseaux  -->
@@ -196,6 +200,6 @@
             </div>
         </div>
     </section>
-    
+
     <app-location></app-location>
 </main>
