@@ -26,6 +26,7 @@
                 "src/assets/preview.jpg",
                 "src/_redirects",
                 "src/sitemap.xml",
+                "src/robots.txt",
                 {
                     "glob": "**/*",
                     "input": "public",
