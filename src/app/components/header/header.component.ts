@@ -2,13 +2,15 @@ import { CommonModule } from '@angular/common';
 import { Component, EventEmitter, Input, Output, Renderer2 } from '@angular/core';
 import { RouterModule} from '@angular/router';
 import { MenuToggleComponent } from './menu-toggle/menu-toggle.component';
+import { slideHeaderUp, slideInUp, fadeIn } from '../../shared/animations/animations';
 
 @Component({
   selector: 'app-header',
   imports: [RouterModule, CommonModule, MenuToggleComponent],
   standalone: true,
   templateUrl: './header.component.html',
-  styleUrl: './header.component.css'
+  styleUrl: './header.component.css',
+  animations: [slideInUp, slideHeaderUp]
 })
 export class HeaderComponent {
 
@@ -20,7 +22,7 @@ export class HeaderComponent {
         img1: "",
     }
     isMenuOpen = false;
-    constructor(private renderer: Renderer2) { }    
+    constructor(private renderer: Renderer2) { }
 
     toggleMenu(){
         this.isMenuOpen = !this.isMenuOpen;

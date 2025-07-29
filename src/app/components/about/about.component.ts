@@ -1,7 +1,7 @@
 import { Component, ElementRef, OnInit, Renderer2, ViewChild, viewChild } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { HeaderComponent } from '../header/header.component';
-import { fadeInDelay, slideInUp, slideInUpLong } from '../../shared/animations/animations';
+import { fadeInDelay, slideInUp, slideInUpLong, fadeInDelayXl, fadeInDelayXxl } from '../../shared/animations/animations';
 import { CommonModule } from '@angular/common';
 import { FormsModule} from '@angular/forms'
 
@@ -20,7 +20,7 @@ import { CommentAnimationDirective } from '../../directives/comment/comment-anim
   standalone: true,
   templateUrl: './about.component.html',
   styleUrl: './about.component.css',
-  animations: [slideInUpLong, slideInUp, fadeInDelay]
+  animations: [slideInUpLong, slideInUp, fadeInDelay, fadeInDelayXl, fadeInDelayXxl]
 })
 
 export class AboutComponent implements OnInit {
@@ -80,7 +80,7 @@ export class AboutComponent implements OnInit {
             this.renderer.removeClass(document.body, 'overflow-y-hidden')
         }
     }
-    
+
     @ViewChild('commentaireBody') commentaireBody!: ElementRef;
 
     scrollToCommentaireBody() {

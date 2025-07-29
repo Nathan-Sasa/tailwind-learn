@@ -22,7 +22,7 @@ export class EducationComponent {
             icon              :  'school',
             iconLocation  :  'location_pin',
             // location        : 'Institut Supérieur d\'informatique Programmation et Analyse/Kinshasa',
-            grad              :  'Licence en Sciences Informatiques',
+            grad              :  'Licence en Sciences Informatiques (encours)',
             fac               :  'Administration Réseaux et Télécommunications',
             university      :  'ISIPA – Kinshasa',
             class             :  '  ',
@@ -32,11 +32,11 @@ export class EducationComponent {
         {
             icon              :  'school',
             iconLocation  :  'location_pin',
-            grad              :  'Graduat en Informatique Industrielle',
+            grad              :  'Graduat en Technique de maintenace et reseaux informatiques',
             fac               :  'Formation technique spécialisée',
             university      :  'ISIPA – Kinshasa',
             class             :  ' ',
-            description     : 'Formation technique en informatique industrielle couvrant l\'automatisation, la programmation de systèmes embarqués, la maintenance informatique et l\'intégration de solutions technologiques dans l\'environnement industriel. '
+            description     : 'Formation en maintenabilité des équipements informatique, l\'administration et la maintenance des réseaux informatiques, acquisition de compétences pratiques en dépannage, configuration et optimisation des réseaux.',
         }
     ]
 
