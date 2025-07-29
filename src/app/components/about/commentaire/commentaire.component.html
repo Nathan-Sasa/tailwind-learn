@@ -30,7 +30,7 @@
             </div>
             <div
                 *ngFor="let com of commentaires"
-                class="w-full h-auto">
+                class="w-full h-auto border-b border-gray-400 last:border-b-0">
                 <div class="profileImg flex items-center gap-x-2 mt-4">
                     <i class="bi bi-person-fill text-xl text-gray-500"></i>
                     <strong class="text-gray-500 tracking-wider capitalize">
@@ -41,7 +41,7 @@
                     <div class="message ml-7 text- text-balance font-light || ">
                         {{com.message}}
                     </div>
-                    <div class="interaction flex items-center ml-7 mt-4 justify-between border-b border-gray-400">
+                    <div class="interaction flex items-center ml-7 mt-4 justify-between ">
                         <span
                             *ngIf="com.date"
                             class="text-xs text-purple-600">
