@@ -1,5 +1,5 @@
-<main class="relative flex flex-col w-screen min-h-screen || pt-7 max-sm:pt-14">
-    <app-header></app-header>
+<main class="relative flex flex-col w-screen min-h-screen || ">
+    <!-- <app-header></app-header> -->
     <section class="pt-10 max-md:pt-24">
         <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs" width="100%" height="100%" preserveAspectRatio="none" viewBox=" 0 0 1440 560 " class="mask-b-from-40% opacity-30 fixed top-18 left-0 right-0 -z-10">
             <g mask="url(&quot;#SvgjsMask3074&quot;)" fill="none">
@@ -12,11 +12,11 @@
                 </mask>
             </defs>
         </svg>
-        <h2 class="max-md:text-3xl absolute top-[7%] max-sm:top-[6%] left-[50%] translate-x-[-50%] text-4xl font-bold text-purple-500 flex items-center gap-4 mb-6 min-[769px]:mb-8">
+        <h2 class="max-md:text-3xl absolute top-[3%] max-sm:top-[2%] left-[50%] translate-x-[-50%] text-4xl font-bold text-purple-500 flex items-center gap-4 mb-6 min-[769px]:mb-8">
             <i class="bi bi-person-lines-fill"></i>
             <span>Contact</span>
         </h2>
-        <div class="contact-container flex flex-col min-lg:flex-row max-md:overflow-y-scroll w-screen min-h-screen justify-center max-md:justify-start items-center gap-4 z-50 max-md:pb-6 min-[769px]:mt-18 min-lg:mt-0 relative || max-md:flex-col">
+        <div class="contact-container flex flex-col min-lg:flex-row max-md:overflow-y-auto w-screen min-h-screen justify-center max-md:justify-start items-center gap-4 z-50 max-md:pb-6 min-[769px]:mt-18 min-lg:mt-0 relative || max-md:flex-col">
             <form
                 #formRef
                 (submit)="onSubmit(); $event.preventDefault()"

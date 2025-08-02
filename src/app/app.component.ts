@@ -1,12 +1,15 @@
+import { ViewportScroller } from '@angular/common';
 import { Component, HostListener, AfterViewInit, Input, Output, EventEmitter } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { NavigationEnd, Router, RouterOutlet } from '@angular/router';
 // import { HeaderComponent } from './components/header/header.component';
 
+
 import Lenis from '@studio-freight/lenis'
+import { HeaderComponent } from './components/header/header.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, HeaderComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
@@ -16,6 +19,19 @@ export class AppComponent implements AfterViewInit {
 
     
     private lenis!: Lenis;
+
+    constructor(
+        private router: Router,
+        private viewportScroller: ViewportScroller
+    ){
+        this.router.events.subscribe(event => {
+            if (event instanceof NavigationEnd) {
+                // Scroll to top on navigation
+                this.viewportScroller.scrollToPosition([0, 0]); //scroll en haut
+            }
+        }
+    );
+    }
 
 
     // if (this.isOverflow = true) {
