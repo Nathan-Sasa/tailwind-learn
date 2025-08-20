@@ -32,8 +32,10 @@
                 *ngFor="let com of commentaires"
                 class="w-full h-auto border-b border-gray-400 last:border-b-0">
                 <div class="profileImg flex items-center gap-x-2 mt-4">
-                    <i class="bi bi-person-fill text-xl text-gray-500"></i>
-                    <strong class="text-gray-500 tracking-wider capitalize">
+                    <div class="w-7 h-7 rounded-full border-2 border-gray-300/50 flex items-center justify-center">
+                        <i class="bi bi-person-fill text-xl text-gray-500/70"></i>
+                    </div>
+                    <strong class="text-gray-500/70 tracking-wider capitalize">
                         {{com.nom}}
                     </strong>
                 </div>
