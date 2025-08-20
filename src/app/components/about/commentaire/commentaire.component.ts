@@ -35,7 +35,7 @@ export class CommentaireComponent implements OnInit {
             this.commentaires = data.map(com => ({
                 ...com,
                 date: (com.date as Timestamp).toDate() as Date
-            })) 
+            }))
 
             // this.commentaires = data
             //     .map((doc) => {
