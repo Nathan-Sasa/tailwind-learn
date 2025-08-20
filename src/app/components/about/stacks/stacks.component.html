@@ -15,8 +15,8 @@
             </p>
         </div>
         <div class="stackDirective stacks-content lg:w-1/2 min-lg:px-14 min-lg:pt-14 w-full h-auto flex flex-wrap justify-center items-center gap-5" appSkillAnimation>
-            <div 
-                *ngFor="let stack of stacks ; let i = index" 
+            <div
+                *ngFor="let stack of stacks ; let i = index"
                 class="{{stack.class}}"
                 (click)="selectedStack = stack ; updateBodyScrollOnStackOpen()">
                 <img src="{{stack.img}}" class="{{stack.classImg}} cursor-pointer" />
@@ -25,21 +25,21 @@
         </div>
 
         <!-- popup affiche stack infos  -->
-        <div 
+        <div
             *ngIf="selectedStack"
-            class="fixed inset-0 top-0 left-0 w-full h-full bg-gray-900/50 bg-opacity-50 z-10000 backdrop-blur-xs flex items-center justify-center">
+            class="fixed inset-0 top-0 left-0 w-full h-screen bg-white/60 z-100 backdrop-blur-xs flex items-center justify-center">
 
-            <div 
-                class=" bg-white/50 backdrop-blur-xs border border-gray-500/50 rounded-xl p-5 flex flex-col items-center justify-between gap-y-5 relative || shadow-md max-w-sm w-full max-md:w-3/4 h-1/2 transform transition-all duration-300 scale-95 opacity-0"
+            <div
+                class=" bg-white/70 backdrop-blur-xs border border-gray-200/50 rounded-xl p-5 flex flex-col items-center justify-between gap-y-5 relative || shadow-md max-w-sm w-full max-md:w-3/4 h-1/2 transform transition-all duration-300 scale-95 opacity-0"
                 [class.scale-100]="selectedStack"
                 [class.opacity-100]="selectedStack">
-                <button 
-                    class="text-gray-400 border-2 border-gray-400 hover:text-gray-200 hover:border-gray-200 rounded-md h-10 w-10 flex items-center justify-center cursor-pointer absolute right-[-40px] max-md:right-0 top-[-50px] transition duration-200"
+                <button
+                    class="text-transparent border-2 bg-purple-400 lg:hover:bg-purple-500 rounded-xl h-10 w-10 flex items-center justify-center cursor-pointer absolute right-[-40px] max-md:right-[-30px] top-[-50px] transition duration-200"
                     (click)="selectedStack = null ; updateBodyScrollOnStackClose()">
-                    <i class="ri-close-line text-2xl"
+                    <i class="ri-close-line text-2xl text-white"
                     ></i>
                 </button>
-                <h3 
+                <h3
                     class="text-xl font-semibold flex justify-center items-center w-full  {{selectedStack.class}}">
                     <img src="{{selectedStack.img}}" class="w-8 mr-2" alt="">
                     <i class="{{selectedStack.icon}} mr-2 text-3xl"></i>
@@ -49,7 +49,7 @@
                 </h3>
                 <div class="flex flex-col items-center justify-between gap-y-2 h-3/4">
                     <i class="{{selectedStack.illustration}} text-8xl mt-6 text-purple-400"></i>
-                    <p 
+                    <p
                     class="text-gray-500">
                     {{selectedStack.description}}
                     </p>
@@ -64,7 +64,7 @@
         <div class="stackDirective mockup-content lg:w-1/2 w-full h-auto flex flex-wrap justify-center items-center gap-5" appSkillAnimation>
             <img src="assets/img/mock/mobile/portfolio:project mobile-view-half mockup.png" class="w-60 h-auto rounded-lg shadow-md" alt="">
         </div>
-        
+
         <div class="stackDirective mockup-description lg:w-1/2 w-full h-auto flex flex-col justify-center items-start gap-y-5" appSkillAnimation>
             <span class="font-semibold font-mono w-full min-lg:flex min-lg:justify-end min-lg:border-l-0 min-lg:border-r-4 min-lg:pr-2 border-l-4 pl-2 min-lg:pl-0 border-indigo-500">
                 Interface

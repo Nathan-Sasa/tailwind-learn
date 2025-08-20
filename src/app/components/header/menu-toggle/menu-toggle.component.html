@@ -1,9 +1,9 @@
-<div class="fixed min-lg:hidden inset-0 z-40 h-screen w-screen bg-black/50 backdrop-blur-sm transition-opacity durarion-300"
+<div class="fixed min-lg:hidden inset-0 z-40 h-screen w-screen bg-white/10 backdrop-blur-sm transition-opacity durarion-300"
     *ngIf="isOpen"
     (click)="onClose()">
 
     <ul
-        class="flex flex-col lg:w-3xl justify-start items-start || min-[769px]:pl-[35%] min-[769px]:pt-[25%] | text-white text-3xl tracking-wide min-lg:hidden fixed top-23 z-50 left-0 right-0 pt-10 gap-y-10 backdrop-blur-xs shadow-lg || h-screen transition-transform duration-300"
+        class="flex flex-col lg:w-3xl justify-start items-start || min-[769px]:pl-[35%] min-[769px]:pt-[25%] | text-purple-700 text-2xl tracking-wide min-lg:hidden fixed top-23 z-50 left-0 right-0 pt-10 gap-y-10 backdrop-blur-xs shadow-lg || h-screen transition-transform duration-300"
         [ngClass]="{'translate-x-0': isOpen, '-translate-x-full': !isOpen}"
         >
             <li class="h-11 flex items-center w-full || pl-14 gap-6 ||">
@@ -12,7 +12,7 @@
                     routerLinkActive="active"
                     [routerLink]="['/home']"
                     (click)="onClose()">
-    
+
                 </i>
                 <span
                     class="cursor-pointer"
