@@ -18,7 +18,7 @@
             <div
                 *ngFor="let stack of stacks ; let i = index"
                 class="{{stack.class}}"
-                (click)="selectedStack = stack ; updateBodyScrollOnStackOpen()">
+                (click)="selectedStack = stack ; updateBodyscroll()">
                 <img src="{{stack.img}}" class="{{stack.classImg}} cursor-pointer" />
                 <i class="{{stack.icon}} text-2xl cursor-pointer"></i>
             </div>
@@ -35,7 +35,7 @@
                 [class.opacity-100]="selectedStack">
                 <button
                     class="text-transparent border-2 bg-purple-400 lg:hover:bg-purple-500 rounded-xl h-10 w-10 flex items-center justify-center cursor-pointer absolute right-[-40px] max-md:right-[-30px] top-[-50px] transition duration-200"
-                    (click)="selectedStack = null ; updateBodyScrollOnStackClose()">
+                    (click)="selectedStack = null ; updateBodyscroll()">
                     <i class="ri-close-line text-2xl text-white"
                     ></i>
                 </button>

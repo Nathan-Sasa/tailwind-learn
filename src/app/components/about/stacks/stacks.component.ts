@@ -12,41 +12,49 @@ import { IntersectionAnimationDirective } from '../../../directives/intersection
 export class StacksComponent {
 
 
-    isStackInfo = false;
+    // isStackInfo = false;
     selectedStack:any = null;
 
     // @Input() isVisible = false;
-    // @Output() closed = new EventEmitter<void>() 
-    
+    // @Output() closed = new EventEmitter<void>()
+
     // Onclose(){
     //     this.closed.emit();
     // }
 
-    constructor(private renderer: Renderer2){}
+    constructor(private rend: Renderer2){}
 
-    closeStack(){
-        this.isStackInfo = false;
-        this.updateBodyScroll();
-    }
-    stackOpen(){
-        this.isStackInfo = !this.isStackInfo;
-        this.updateBodyScroll();
-    }
-
-    updateBodyScroll(){
-        if(this.isStackInfo){
-            this.renderer.addClass(document.body, 'overflow-y-hidden')
+    updateBodyscroll(){
+        if(this.selectedStack){
+            this.rend.addClass(document.body, 'overflow-y-hidden');
         }else{
-            this.renderer.removeClass(document.body, 'overflow-y-hidden')
+            this.rend.removeClass(document.body, 'overflow-y-hidden');
         }
     }
-    
-    updateBodyScrollOnStackOpen(){
-        this.renderer.addClass(document.body, 'overflow-y-hidden')
-    }
-    updateBodyScrollOnStackClose(){
-        this.renderer.removeClass(document.body, 'overflow-y-hidden')
-    }
+
+    // closeStack(){
+    //     this.isStackInfo = false;
+    //     this.updateBodyScroll();
+    // }
+    // stackOpen(){
+    //     this.isStackInfo = !this.isStackInfo;
+    //     this.updateBodyScroll();
+    // }
+
+    // updateBodyScroll(){
+    //     if(this.isStackInfo){
+    //         this.rend.addClass(document.body, 'overflow-y-hidden')
+    //     }else{
+    //         this.rend.removeClass(document.body, 'overflow-y-hidden')
+    //     }
+    // }
+
+    // updateBodyScrollOnStackOpen(){
+    //     this.renderer.addClass(document.body, 'overflow-y-hidden')
+    // }
+    // updateBodyScrollOnStackClose(){
+    //     this.renderer.removeClass(document.body, 'overflow-y-hidden')
+    // }
 
 
     stacks = [
@@ -221,7 +229,7 @@ export class StacksComponent {
             description: 'Architecture d\'API basée sur les principes REST, permettant la communication entre les clients et les serveurs via HTTP.',
             class: 'text-blue-600 group-hover:text-blue-700',
             img: 'https://cdn-icons-png.freepik.com/256/15356/15356470.png?semt=ais_hybrid',
-            classImg: 'w-7' 
+            classImg: 'w-7'
         },
         {
             name: 'WebSockets',
